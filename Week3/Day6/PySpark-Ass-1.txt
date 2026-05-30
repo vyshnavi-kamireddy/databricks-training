@@ -1,0 +1,54 @@
+## SORT / ORDERBY
+
+-- 76. Sort employees by salary ascending.
+
+-- 77. Sort employees by salary descending.
+
+-- 78. Sort employees by age descending.
+
+-- 79. Sort employees by emp_name ascending.
+
+-- 80. Sort employees by city and salary descending.
+
+-- 81. Sort employees by joining_date.
+
+-- 82. Sort employees by department.
+
+-- 83. Sort employees by designation descending.
+
+-- 84. Sort employees first by city then age.
+
+-- 85. Sort employees by salary and limit top 10.
+
+-- 86. Sort employees by emp_id descending.
+
+-- 87. Sort employees from IT department by salary descending.
+
+-- 88. Sort employees by joining_date descending.
+
+-- 89. Sort employees alphabetically by emp_name.
+
+-- 90. Sort employees by multiple columns.
+
+
+## LIMIT
+
+-- 91. Display first 5 records.
+
+-- 92. Display top 10 employees.
+
+-- 93. Display first 3 employees from IT department.
+
+-- 94. Display top 5 highest salary employees.
+
+-- 95. Display lowest 5 salary employees.
+
+-- 96. Display first 7 rows after sorting by age.
+
+-- 97. Display first 2 employees from Hyderabad.
+
+-- 98. Display first 15 records from dataframe.
+
+-- 99. Display top 5 youngest employees.
+
+-- 100. Display first 8 employees after filtering salary > 60000.

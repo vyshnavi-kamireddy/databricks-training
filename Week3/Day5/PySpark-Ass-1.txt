@@ -1,0 +1,84 @@
+## WITHCOLUMNRENAMED
+
+-- 41. Rename emp_name to employee_name.
+
+-- 42. Rename department to dept.
+
+-- 43. Rename joining_date to doj.
+
+-- 44. Rename salary to monthly_salary.
+
+-- 45. Rename designation to job_role.
+
+-- 46. Rename city to work_location.
+
+-- 47. Rename age to employee_age.
+
+-- 48. Rename multiple columns one by one.
+
+-- 49. Rename emp_id to employee_id.
+
+-- 50. Rename department to business_unit.
+
+
+## WITHCOLUMN
+
+-- 51. Create bonus column as 10% of salary.
+
+-- 52. Create annual_salary column.
+
+-- 53. Create tax column as 5% of salary.
+
+-- 54. Create updated_salary by adding 5000.
+
+-- 55. Create salary_category column:
+        High
+        Medium
+        Low
+
+-- 56. Create age_group column:
+        Young
+        Adult
+
+-- 57. Create location column by combining city and department.
+
+-- 58. Create increment_salary column with 15% hike.
+
+-- 59. Create experience_status column based on joining year.
+
+-- 60. Create name_length column using employee name.
+
+-- 61. Create is_high_salary column using condition.
+
+-- 62. Create joining_year column from joining_date.
+
+-- 63. Create salary_after_tax column.
+
+-- 64. Create department_code column.
+
+-- 65. Create double_salary column.
+
+
+## TYPECASTING
+
+-- 66. Convert salary to string datatype.
+
+-- 67. Convert age to double datatype.
+
+-- 68. Convert joining_date to date datatype.
+
+-- 69. Convert emp_id to string datatype.
+
+-- 70. Convert salary to integer datatype.
+
+-- 71. Convert age to string datatype.
+
+-- 72. Convert joining_date to timestamp datatype.
+
+-- 73. Convert salary to float datatype.
+
+-- 74. Convert emp_id to long datatype.
+
+-- 75. Convert multiple columns into different datatypes.
+
+
