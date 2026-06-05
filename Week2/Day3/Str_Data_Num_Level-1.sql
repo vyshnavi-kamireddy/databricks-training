@@ -56,6 +56,29 @@ INSERT INTO salary_audit VALUES
 -- Else Stable
 
 
+select
+
+emp_id,emp_name,salary,tax_percent,last_revision,
+
+LOWER(emp_name) lower_case,
+
+ROUND(salary-(salary*(tax_percent/100))) net_salary,
+
+YEAR(last_revision) revision_year,
+
+TIMESTAMPDIFF(MONTH,last_revision,CURDATE()) months_since_revision,
+
+CASE
+WHEN tax_percent>20 AND TIMESTAMPDIFF(MONTH,last_revision,CURDATE())>24
+THEN 'Flag Tax Shock'
+WHEN tax_percent BETWEEN 15 AND 20
+THEN 'Flag Review Needed'
+ELSE 'Stable'
+END as status
+
+from salary_audit;
+
+
 
 -- =========================================================
 -- QUESTION 2 – Bonus Abuse Detection
@@ -104,6 +127,32 @@ INSERT INTO bonus_monitor VALUES
 -- Normal if bonus <= 20%
 
 -- Audit
+
+
+select
+
+emp_code,emp_name,base_salary,bonus,bonus_date,
+
+CONCAT(
+  UPPER(LEFT(emp_name,1)),
+  LOWER(SUBSTRING(emp_name,2))
+) proper_case,
+
+ROUND((bonus/base_salary)*100) bonus_perc,
+
+DAYNAME(bonus_date) day_name,
+
+ABS(base_salary-bonus) absolute_salary_diff,
+
+CASE
+WHEN ROUND((bonus/base_salary)*100) >30 AND DAYNAME(bonus_date) IN ('Saturday','Sunday')
+THEN 'Suspicious'
+WHEN ROUND((bonus/base_salary)*100) <=20
+THEN 'Normal'
+ELSE 'Audit'
+END as status
+
+from bonus_monitor;
 
 
 
@@ -156,6 +205,29 @@ INSERT INTO employee_experience VALUES
 -- Matched
 
 
+select 
+
+emp_id,emp_name,joining_date,declared_experience,salary,
+
+UPPER(emp_name) upper_case,
+
+TIMESTAMPDIFF(YEAR,joining_date,CURDATE()) actual_experience,
+
+ABS(declared_experience-TIMESTAMPDIFF(YEAR,joining_date,CURDATE()))  as Diff,
+
+Floor(salary) floor_salary,
+
+CASE
+WHEN declared_experience>TIMESTAMPDIFF(YEAR,joining_date,CURDATE())
+THEN 'OverStated'
+WHEN declared_experience<TIMESTAMPDIFF(YEAR,joining_date,CURDATE())
+THEN 'UnderStated'
+ELSE 'Matched'
+END as status
+
+from employee_experience;
+
+
 
 -- =========================================================
 -- QUESTION 4 – Salary Digit Pattern Analysis
@@ -202,6 +274,25 @@ INSERT INTO salary_digits VALUES
 -- No Match otherwise
 
 
+select
+
+emp_id,emp_name,salary,credit_date,
+
+RIGHT(emp_name,2) last_twoChar,
+
+DAY(credit_date) as day_of_month,
+
+Truncate(salary,0) as truncate_salary,
+
+CASE
+WHEN MOD(salary,10)=DAY(credit_date)
+THEN 'Pattern Match'
+ELSE 'No Match'
+END as matching_status
+
+from salary_digits;
+
+
 
 -- =========================================================
 -- QUESTION 5 – Odd–Even Salary Compliance
@@ -246,3 +337,24 @@ INSERT INTO payroll_control VALUES
 -- Violation if even salary paid on odd weekday
 
 -- Compliant otherwise
+
+
+select
+
+emp_id,emp_name,salary,payment_date,
+
+LOWER(emp_name) lower_case,
+DAYNAME(payment_date) week_day,
+ROUND(salary) rounded_salary,
+MOD(salary,10) mod_salary,
+
+ CASE
+        WHEN MOD(ROUND(salary),2) = 0
+             AND MOD(DAY(payment_date),2) <> 0
+        THEN 'Violation'
+
+        ELSE 'Compliant'
+    END AS status
+
+from payroll_control;
+
