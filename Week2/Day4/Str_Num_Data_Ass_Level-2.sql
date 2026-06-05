@@ -52,6 +52,34 @@ INSERT INTO employee_login VALUES
 -- Weekend Login otherwise
 
 
+select
+
+emp_id,emp_name,login_time,logout_time,
+
+CONCAT(
+  UPPER(LEFT(emp_name,1)),
+  LOWER(SUBSTRING(emp_name,2))
+) proper_case,
+
+CASE
+WHEN DAYNAME(login_time) IN ('Saturday','Sunday')
+THEN 'Weekend'
+ELSE 'Weekday'
+END as day,
+
+ROUND(TIMESTAMPDIFF(minute,login_time,logout_time)/60,2) hours,
+
+CASE
+WHEN DAYNAME(login_time) NOT IN ('Saturday','Sunday') AND ROUND(TIMESTAMPDIFF(minute,login_time,logout_time)/60,2)>=8
+THEN 'Good Performer'
+WHEN DAYNAME(login_time) NOT IN ('Saturday','Sunday') AND ROUND(TIMESTAMPDIFF(minute,login_time,logout_time)/60,2)<6
+THEN 'Bad Performer'
+ELSE 'Weekend Login'
+END status
+
+from employee_login;
+
+
 
 -- =========================================================
 -- QUESTION 2 – Past 7 Days Attendance & Productivity Check
@@ -106,6 +134,34 @@ INSERT INTO attendance_log VALUES
 -- Absent from Last 7 Days
 
 
+select
+
+emp_id,emp_name,login_date,login_time,logout_time,
+
+UPPER(emp_name) upper_case,
+TIMESTAMPDIFF(DAY,login_date,CURDATE()) days,
+
+CASE
+WHEN DAYNAME(login_date) IN ('Saturday','Sunday')
+THEN 'Weekend'
+ELSE 'Weekday'
+END as day,
+
+ROUND(TIMESTAMPDIFF(minute,login_time,logout_time)/60,2) hours,
+
+CASE
+WHEN TIMESTAMPDIFF(DAY,login_date,CURDATE())<=7 AND ROUND(TIMESTAMPDIFF(minute,login_time,logout_time)/60,2)>=8
+THEN 'Active & Productive'
+WHEN TIMESTAMPDIFF(DAY,login_date,CURDATE())<=7 AND ROUND(TIMESTAMPDIFF(minute,login_time,logout_time)/60,2)<8
+THEN 'Active but Low'
+ELSE ' Absent '
+END status
+
+from attendance_log;
+
+
+
+
 
 -- =========================================================
 -- QUESTION 3 – Weekend Work Abuse Detection
@@ -158,6 +214,25 @@ INSERT INTO weekend_monitor VALUES
 -- Normal Working Day
 
 
+select
+
+emp_id,emp_name,work_date,login_time,logout_time,
+
+DAYNAME(work_date) day_name ,
+LOWER(emp_name) lower_case,
+CEIL(TIMESTAMPDIFF(MINUTE,login_time,logout_time)/60) working_hours,
+
+CASE
+WHEN DAYNAME(work_date) IN ('Saturday','Sunday') AND CEIL(TIMESTAMPDIFF(MINUTE,login_time,logout_time)/60)>=8
+THEN 'Weekend Overtime'
+WHEN DAYNAME(work_date) IN ('Saturday','Sunday') AND CEIL(TIMESTAMPDIFF(MINUTE,login_time,logout_time)/60)<4
+THEN 'Suspicious Login'
+ELSE 'Normal Working Day'
+END status
+
+from weekend_monitor;
+
+
 
 -- =========================================================
 -- QUESTION 4 – Login Time Deviation & Discipline Score
@@ -208,55 +283,24 @@ INSERT INTO login_discipline VALUES
 -- Poor Discipline otherwise
 
 
+select
 
--- =========================================================
--- QUESTION 5 – Absenteeism vs Performance Correlation
--- =========================================================
+emp_id,emp_name,login_datetime,logout_datetime,
 
-CREATE TABLE performance_tracker (
+HOUR(login_datetime) login_hour,
+TRUNCATE(TIMESTAMPDIFF(MINUTE,login_datetime,logout_datetime)/60,1) working_hours,
 
-    emp_id INT,
+DAYNAME(login_datetime) day_name,
 
-    emp_name VARCHAR(50),
+CASE
+WHEN DAYNAME(login_datetime) NOT IN ('Saturday','Sunday') AND HOUR(login_datetime)<9 AND TRUNCATE(TIMESTAMPDIFF(MINUTE,login_datetime,logout_datetime)/60,1)>=8
+THEN 'Disciplined '
+WHEN DAYNAME(login_datetime) NOT IN ('Saturday','Sunday') AND HOUR(login_datetime)>10 
+THEN 'Late Comer  '
+ELSE 'Poor Discipline'
+END status
 
-    work_date DATE,
+from login_discipline;
 
-    login_time TIME,
 
-    logout_time TIME
 
-);
-
--- Data
-
-INSERT INTO performance_tracker VALUES
-
-(1,'Karthik','2025-01-09','09:00:00','18:00:00'),
-
-(2,'Karthik','2025-01-10','09:10:00','17:50:00'),
-
-(3,'Veena','2025-01-05','10:00:00','15:00:00'),
-
-(4,'Ravi','2025-01-14','09:00:00','19:00:00'),
-
-(5,'Anil','2025-01-03','11:00:00','14:00:00');
-
--- Question
-
--- For each record:
-
--- Identify whether work_date is within last 7 days
-
--- Identify weekday or weekend
-
--- Calculate total hours worked
-
--- Apply FLOOR to hours
-
--- Use CASE:
-
--- Consistent Performer if last 7 days AND weekday AND hours ≥ 8
-
--- Irregular Performer if hours < 6
-
--- Absent / Old Record
