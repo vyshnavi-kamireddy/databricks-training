@@ -48,6 +48,26 @@ INSERT INTO attendance VALUES
 -- Poor otherwise
 
 
+select 
+
+emp_id,emp_name,total_days,present_days,record_date,
+
+ROUND((present_days/total_days)*100) attendence_percentage,
+MONTHNAME(record_date) month,
+total_days-present_days absent_days,
+LOWER(emp_name) lower_case,
+
+CASE
+WHEN ROUND((present_days/total_days)*100)>=90
+THEN 'Excellent'
+WHEN ROUND((present_days/total_days)*100) BETWEEN 75 AND 89
+THEN 'Average'
+ELSE 'Poor'
+END as attendence_status
+
+from attendance;
+
+
 
 -- =========================================================
 -- QUESTION 7: Product Discount Validation
@@ -96,6 +116,30 @@ INSERT INTO product_sales VALUES
 -- Overpriced
 
 -- No Discount
+
+
+select 
+
+product_id,product_name,mrp,selling_price,sale_date,
+
+ABS(mrp-selling_price) discount_amount,
+ROUND(((mrp-selling_price)/mrp)*100,2) discount_perc,
+
+DAYNAME(sale_date) day_name,
+CONCAT(
+  UPPER(LEFT(product_name,1)),
+  LOWER(SUBSTRING(product_name,2))
+) proper_case,
+
+CASE
+WHEN selling_price<mrp
+THEN 'Valid Discount'
+WHEN selling_price>mrp
+THEN 'Over Priced'
+ELSE 'No Discount'
+END as discount_status
+
+from product_sales;
 
 
 
@@ -148,6 +192,29 @@ INSERT INTO insurance_policies VALUES
 -- Expired
 
 
+select 
+
+policy_id,holder_name,premium_amount,policy_start,policy_end,
+
+TIMESTAMPDIFF(YEAR,policy_start,policy_end) policy_duration,
+TIMESTAMPDIFF(DAY,CURDATE(),policy_end)  Remaining_days,
+
+ROUND(premium_amount) Rounded_premium,
+UPPER(holder_name) upper_case,
+
+CASE
+WHEN policy_end<CURDATE()
+THEN 'Expired'
+WHEN TIMESTAMPDIFF(YEAR,policy_start,policy_end)>2
+THEN 'Long_Term'
+WHEN TIMESTAMPDIFF(YEAR,policy_start,policy_end) BETWEEN 1 AND 2
+THEN 'Mid_Term'
+ELSE 'Short_Term'
+END as policy_status
+
+from insurance_policies;
+
+
 
 -- =========================================================
 -- QUESTION 9: Salary Increment Simulation
@@ -198,6 +265,43 @@ INSERT INTO salary_revision VALUES
 -- No Increment
 
 
+select
+emp_id,emp_name,current_salary,rating,last_hike,
+
+TIMESTAMPDIFF(YEAR,last_hike,CURDATE()) year_since_lastHike,
+
+CASE 
+WHEN rating=5
+THEN current_salary*0.20
+WHEN rating=4
+THEN current_salary*0.10
+ELSE 0
+END as increment_amount,
+
+ROUND(
+  current_salary+
+     CASE 
+     WHEN rating=5
+     THEN current_salary*0.20
+     WHEN rating=4
+     THEN current_salary*0.10
+     ELSE 0
+  	 END
+) as new_salary,
+
+LOWER(emp_name) lower_case,
+
+CASE
+WHEN rating=5
+THEN 'High Increment'
+WHEN rating=4
+THEN 'Moderate Increment'
+ELSE 'No Increment'
+END as increment_status
+
+from salary_revision;
+
+
 
 -- =========================================================
 -- QUESTION 10: Customer Account Status Evaluation
@@ -246,3 +350,36 @@ INSERT INTO bank_accounts VALUES
 -- Dormant
 
 -- Overdrawn
+
+
+select
+
+account_id,customer_name,balance,last_transaction,branch,
+
+ABS(balance) absolute_balance,
+
+TIMESTAMPDIFF(DAY,last_transaction,CURDATE()) days_since_last_transaction,
+
+CONCAT(
+  UPPER(LEFT(branch,1)),
+  LOWER(SUBSTRING(branch,2))
+) proper_case,
+
+CASE 
+WHEN balance>=0
+THEN '+'
+ELSE '-'
+END as sign,
+
+CASE
+WHEN balance<0
+THEN 'Overdrawn'
+WHEN TIMESTAMPDIFF(YEAR,last_transaction,CURDATE()) >=2
+THEN 'Dormant'
+ELSE 'Active'
+END as account_status
+
+from bank_accounts;
+
+
+
