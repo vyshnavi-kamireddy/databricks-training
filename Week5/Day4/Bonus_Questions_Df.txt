@@ -1,0 +1,23 @@
+-- =====================================================
+-- BONUS CHALLENGE QUESTIONS
+-- =====================================================
+
+-- 1. Find second highest salary using window functions.
+
+-- 2. Find duplicate employee records.
+
+-- 3. Find employees joined in the same year.
+
+-- 4. Generate department-wise top earners.
+
+-- 5. Create running total salary.
+
+-- 6. Find cumulative average salary.
+
+-- 7. Identify employees with same salary.
+
+-- 8. Find longest employee name.
+
+-- 9. Create dynamic salary bands.
+
+-- 10. Build complete employee reporting pipeline.

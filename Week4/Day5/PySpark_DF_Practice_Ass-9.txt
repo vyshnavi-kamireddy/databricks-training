@@ -1,0 +1,75 @@
+-- =====================================================
+-- 41. MAPPARTITIONS() QUESTIONS
+-- =====================================================
+
+-- 1. Process data partition-wise.
+
+-- 2. Count rows per partition.
+
+-- 3. Convert names to uppercase partition-wise.
+
+-- 4. Optimize heavy computations.
+
+-- 5. Compare map vs mapPartitions.
+
+
+-- =====================================================
+-- 42. ZIPWITHINDEX() QUESTIONS
+-- =====================================================
+
+-- 1. Add index to each employee.
+
+-- 2. Generate sequence numbers.
+
+-- 3. Create row IDs.
+
+-- 4. Compare monotonically_increasing_id.
+
+-- 5. Generate indexed employee list.
+
+
+-- =====================================================
+-- 43. CROSSJOIN() QUESTIONS
+-- =====================================================
+
+-- 1. Cross join employees with departments.
+
+-- 2. Generate all combinations.
+
+-- 3. Find total combinations count.
+
+-- 4. Cross join city and department.
+
+-- 5. Understand Cartesian product.
+
+
+-- =====================================================
+-- 44. EXCEPT() QUESTIONS
+-- =====================================================
+
+-- 1. Find employees not in new_emp_df.
+
+-- 2. Compare two dataframes.
+
+-- 3. Remove matching rows.
+
+-- 4. Find difference between datasets.
+
+-- 5. Validate missing employees.
+
+
+-- =====================================================
+-- 45. INTERSECT() QUESTIONS
+-- =====================================================
+
+-- 1. Find common employees.
+
+-- 2. Compare datasets.
+
+-- 3. Find common departments.
+
+-- 4. Find common cities.
+
+-- 5. Validate matching records.
+
+

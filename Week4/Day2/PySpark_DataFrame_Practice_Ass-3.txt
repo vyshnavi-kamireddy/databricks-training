@@ -1,0 +1,92 @@
+-- =====================================================
+-- 11. JOIN() QUESTIONS
+-- =====================================================
+
+department_data = [
+    ("IT", "John"),
+    ("HR", "Smith"),
+    ("QA", "David"),
+    ("Analytics", "Kevin"),
+    ("Support", "Robert")
+]
+
+dept_columns = ["department", "manager"]
+
+dept_df = spark.createDataFrame(department_data, dept_columns)
+
+-- 1. Perform inner join between emp_df and dept_df.
+
+-- 2. Perform left join.
+
+-- 3. Perform right join.
+
+-- 4. Perform full outer join.
+
+-- 5. Find employees along with manager names.
+
+
+-- =====================================================
+-- 12. UNION() QUESTIONS
+-- =====================================================
+
+new_emp_data = [
+    (111, "Teja", "Developer", "IT", 72000, "Hyderabad", 26, "2023-01-10", "Male"),
+    (112, "Divya", "Analyst", "Analytics", 65000, "Bangalore", 25, "2022-11-05", "Female")
+]
+
+new_emp_df = spark.createDataFrame(new_emp_data, columns)
+
+-- 1. Union emp_df with new_emp_df.
+
+-- 2. Count total rows after union.
+
+-- 3. Remove duplicates after union.
+
+-- 4. Find all IT employees after union.
+
+-- 5. Sort unioned dataframe by salary.
+
+
+-- =====================================================
+-- 13. UNIONBYNAME() QUESTIONS
+-- =====================================================
+
+-- 1. Create another dataframe with shuffled columns and perform unionByName.
+
+-- 2. Use allowMissingColumns=True.
+
+-- 3. Add extra column and perform unionByName.
+
+-- 4. Compare union vs unionByName.
+
+-- 5. Merge employee datasets with different schemas.
+
+
+-- =====================================================
+-- 14. LIMIT() QUESTIONS
+-- =====================================================
+
+-- 1. Show first 3 records.
+
+-- 2. Show first 5 employees.
+
+-- 3. Get top 2 highest salary employees.
+
+-- 4. Get first 4 IT employees.
+
+-- 5. Show first employee record.
+
+
+-- =====================================================
+-- 15. SAMPLE() QUESTIONS
+-- =====================================================
+
+-- 1. Take 50% sample of data.
+
+-- 2. Take 30% sample with seed.
+
+-- 3. Take sample from IT employees.
+
+-- 4. Compare full data vs sampled data.
+
+-- 5. Take random sample of 5 rows.

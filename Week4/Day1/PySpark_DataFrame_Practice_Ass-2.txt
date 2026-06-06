@@ -1,0 +1,73 @@
+-- =====================================================
+-- 6. DISTINCT() QUESTIONS
+-- =====================================================
+
+-- 1. Find distinct departments.
+
+-- 2. Find distinct cities.
+
+-- 3. Find distinct designations.
+
+-- 4. Find distinct genders.
+
+-- 5. Find unique department and city combinations.
+
+
+-- =====================================================
+-- 7. DROPDUPLICATES() QUESTIONS
+-- =====================================================
+
+-- 1. Remove duplicate rows based on emp_id.
+
+-- 2. Remove duplicates based on department.
+
+-- 3. Remove duplicates based on city.
+
+-- 4. Remove duplicates based on department and city.
+
+-- 5. Remove duplicate employees based on name.
+
+
+-- =====================================================
+-- 8. SORT() / ORDERBY() QUESTIONS
+-- =====================================================
+
+-- 1. Sort employees by salary ascending.
+
+-- 2. Sort employees by age descending.
+
+-- 3. Sort employees by department and salary.
+
+-- 4. Sort employees by city.
+
+-- 5. Sort employees by joining_date descending.
+
+
+-- =====================================================
+-- 9. GROUPBY() QUESTIONS
+-- =====================================================
+
+-- 1. Find average salary by department.
+
+-- 2. Find maximum salary in each department.
+
+-- 3. Find minimum age in each department.
+
+-- 4. Count employees in each city.
+
+-- 5. Find total salary by gender.
+
+
+-- =====================================================
+-- 10. AGG() QUESTIONS
+-- =====================================================
+
+-- 1. Find total salary of all employees.
+
+-- 2. Find average employee age.
+
+-- 3. Find max and min salary together.
+
+-- 4. Find count of employees.
+
+-- 5. Find average salary and average age department-wise.

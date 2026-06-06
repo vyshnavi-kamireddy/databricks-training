@@ -1,0 +1,73 @@
+-- =====================================================
+-- 36. NA.DROP() QUESTIONS
+-- =====================================================
+
+-- 1. Drop rows with null salary.
+
+-- 2. Drop rows with any null value.
+
+-- 3. Drop rows with all null values.
+
+-- 4. Drop rows based on threshold.
+
+-- 5. Drop rows with null city.
+
+
+-- =====================================================
+-- 37. NA.FILL() QUESTIONS
+-- =====================================================
+
+-- 1. Fill null age with 25.
+
+-- 2. Fill null department with Unknown.
+
+-- 3. Fill salary with average.
+
+-- 4. Fill multiple columns together.
+
+-- 5. Fill missing string values.
+
+
+-- =====================================================
+-- 38. MAP() TRANSFORMATION QUESTIONS (RDD)
+-- =====================================================
+
+-- 1. Convert names to uppercase.
+
+-- 2. Increase salary by 10%.
+
+-- 3. Extract employee names.
+
+-- 4. Convert department names to lowercase.
+
+-- 5. Create employee summary strings.
+
+
+-- =====================================================
+-- 39. FLATMAP() QUESTIONS (RDD)
+-- =====================================================
+
+-- 1. Split names into characters.
+
+-- 2. Split designation words.
+
+-- 3. Extract all skills.
+
+-- 4. Flatten nested lists.
+
+-- 5. Generate words from sentences.
+
+
+-- =====================================================
+-- 40. REDUCEBYKEY() QUESTIONS (RDD)
+-- =====================================================
+
+-- 1. Count employees by department.
+
+-- 2. Sum salaries department-wise.
+
+-- 3. Count city-wise employees.
+
+-- 4. Aggregate ages by department.
+
+-- 5. Find maximum salary by city.

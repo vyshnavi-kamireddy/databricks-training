@@ -1,0 +1,73 @@
+-- =====================================================
+-- 26. ISIN() QUESTIONS
+-- =====================================================
+
+-- 1. Find employees from Hyderabad and Bangalore.
+
+-- 2. Find employees in IT and QA departments.
+
+-- 3. Find employees with age 28, 30 and 35.
+
+-- 4. Filter female employees from Pune and Chennai.
+
+-- 5. Find employees with specific emp_ids.
+
+
+-- =====================================================
+-- 27. BETWEEN() QUESTIONS
+-- =====================================================
+
+-- 1. Find employees with salary between 50000 and 80000.
+
+-- 2. Find employees aged between 25 and 30.
+
+-- 3. Find salaries between 60000 and 90000.
+
+-- 4. Find employees joined between years.
+
+-- 5. Find employees with emp_id between 102 and 108.
+
+
+-- =====================================================
+-- 28. PIVOT() QUESTIONS
+-- =====================================================
+
+-- 1. Pivot department with average salary.
+
+-- 2. Pivot city with employee count.
+
+-- 3. Pivot gender with total salary.
+
+-- 4. Pivot department with maximum age.
+
+-- 5. Create department-wise summary table.
+
+
+-- =====================================================
+-- 29. UNPIVOT / STACK QUESTIONS
+-- =====================================================
+
+-- 1. Convert pivoted salary table back to rows.
+
+-- 2. Unpivot city data.
+
+-- 3. Convert department columns into rows.
+
+-- 4. Practice stack function.
+
+-- 5. Create normalized dataframe.
+
+
+-- =====================================================
+-- 30. WINDOW FUNCTIONS QUESTIONS
+-- =====================================================
+
+-- 1. Find rank of employees based on salary.
+
+-- 2. Find dense_rank department-wise.
+
+-- 3. Find row_number for employees.
+
+-- 4. Find lead salary.
+
+-- 5. Find lag salary.

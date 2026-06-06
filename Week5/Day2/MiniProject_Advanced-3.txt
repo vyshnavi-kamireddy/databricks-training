@@ -1,0 +1,18 @@
+-- =====================================================
+-- ADVANCED MINI PROJECTS
+-- =====================================================
+
+
+-- =====================================================
+-- PROJECT 3: DATA ENGINEERING SCENARIOS
+-- =====================================================
+
+-- 1. Remove duplicate records.
+
+-- 2. Handle missing data.
+
+-- 3. Join multiple datasets.
+
+-- 4. Optimize partitions.
+
+-- 5. Create aggregated summary tables.

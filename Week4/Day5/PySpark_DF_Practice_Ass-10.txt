@@ -1,0 +1,73 @@
+-- =====================================================
+-- 46. CUBE() QUESTIONS
+-- =====================================================
+
+-- 1. Perform cube on department and city.
+
+-- 2. Find multi-dimensional aggregates.
+
+-- 3. Analyze salary combinations.
+
+-- 4. Find total salary cube.
+
+-- 5. Compare rollup and cube.
+
+
+-- =====================================================
+-- 47. ROLLUP() QUESTIONS
+-- =====================================================
+
+-- 1. Rollup department and city.
+
+-- 2. Create hierarchical summaries.
+
+-- 3. Find total salaries.
+
+-- 4. Analyze rollup output.
+
+-- 5. Compare cube and rollup.
+
+
+-- =====================================================
+-- 48. BROADCAST() QUESTIONS
+-- =====================================================
+
+-- 1. Broadcast join small department table.
+
+-- 2. Compare join performance.
+
+-- 3. Optimize joins.
+
+-- 4. Use broadcast with lookup table.
+
+-- 5. Analyze execution plan.
+
+
+-- =====================================================
+-- 49. EXPLODE_OUTER() QUESTIONS
+-- =====================================================
+
+-- 1. Explode arrays with null values.
+
+-- 2. Compare explode and explode_outer.
+
+-- 3. Handle empty arrays.
+
+-- 4. Preserve null rows.
+
+-- 5. Analyze output differences.
+
+
+-- =====================================================
+-- 50. ARRAY_CONTAINS() QUESTIONS
+-- =====================================================
+
+-- 1. Find employees with Spark skill.
+
+-- 2. Filter Python developers.
+
+-- 3. Search arrays.
+
+-- 4. Find employees with SQL skill.
+
+-- 5. Check Azure skill availability.

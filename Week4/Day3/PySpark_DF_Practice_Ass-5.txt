@@ -1,0 +1,75 @@
+-- =====================================================
+-- 21. LIT() QUESTIONS
+-- =====================================================
+
+-- 1. Add company_name column.
+
+-- 2. Add country column with value India.
+
+-- 3. Add constant bonus column.
+
+-- 4. Add status column as Active.
+
+-- 5. Add training column with Yes.
+
+
+-- =====================================================
+-- 22. WHEN() / OTHERWISE() QUESTIONS
+-- =====================================================
+
+-- 1. Categorize salary as High and Low.
+
+-- 2. Categorize employees based on age.
+
+-- 3. Create experience level column.
+
+-- 4. Mark employees eligible for bonus.
+
+-- 5. Create department category column.
+
+
+-- =====================================================
+-- 23. SUBSTRING() QUESTIONS
+-- =====================================================
+
+-- 1. Extract first 3 characters from name.
+
+-- 2. Extract year from joining_date.
+
+-- 3. Extract first 2 letters of department.
+
+-- 4. Extract last 3 characters from designation.
+
+-- 5. Create short employee code.
+
+
+-- =====================================================
+-- 24. REGEXP_REPLACE() QUESTIONS
+-- =====================================================
+
+-- 1. Replace spaces in designation with underscore.
+
+-- 2. Remove vowels from names.
+
+-- 3. Replace Hyderabad with HYD.
+
+-- 4. Remove special characters.
+
+-- 5. Standardize department names.
+
+
+-- =====================================================
+-- 25. LIKE() QUESTIONS
+-- =====================================================
+
+-- 1. Find names starting with S.
+
+-- 2. Find designations ending with Engineer.
+
+-- 3. Find cities containing 'a'.
+
+-- 4. Find departments starting with A.
+
+-- 5. Find employees whose name contains 'ra'.
+
+

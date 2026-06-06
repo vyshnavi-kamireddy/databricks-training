@@ -1,0 +1,20 @@
+-- =====================================================
+-- ADVANCED MINI PROJECTS
+-- =====================================================
+
+
+-- =====================================================
+-- PROJECT 2: HR DASHBOARD
+-- =====================================================
+
+-- 1. Count male and female employees.
+
+-- 2. Find average age department-wise.
+
+-- 3. Generate hiring trends by year.
+
+-- 4. Create city-wise employee distribution.
+
+-- 5. Identify highest paid employees.
+
+

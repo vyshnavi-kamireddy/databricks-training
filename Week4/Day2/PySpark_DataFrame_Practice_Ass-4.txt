@@ -1,0 +1,83 @@
+-- =====================================================
+-- 16. EXPLODE() QUESTIONS
+-- =====================================================
+
+skills_data = [
+    (101, ["Python", "Spark", "Azure"]),
+    (102, ["Java", "SQL"]),
+    (103, ["Power BI", "SQL"])
+]
+
+skills_columns = ["emp_id", "skills"]
+
+skills_df = spark.createDataFrame(skills_data, skills_columns)
+
+-- 1. Explode skills array into multiple rows.
+
+-- 2. Count total skills.
+
+-- 3. Find employees with Python skill.
+
+-- 4. Find distinct skills.
+
+-- 5. Group employees by skill.
+
+
+-- =====================================================
+-- 17. SPLIT() QUESTIONS
+-- =====================================================
+
+-- 1. Split joining_date into year, month and day.
+
+-- 2. Split designation into words.
+
+-- 3. Split city names.
+
+-- 4. Extract year from joining_date.
+
+-- 5. Create separate columns using split.
+
+
+-- =====================================================
+-- 18. CONCAT() / CONCAT_WS() QUESTIONS
+-- =====================================================
+
+-- 1. Concatenate name and department.
+
+-- 2. Create full employee details column.
+
+-- 3. Concatenate city and department with hyphen.
+
+-- 4. Create employee label using concat_ws.
+
+-- 5. Combine name and designation.
+
+
+-- =====================================================
+-- 19. CAST() QUESTIONS
+-- =====================================================
+
+-- 1. Cast salary to double.
+
+-- 2. Cast age to string.
+
+-- 3. Convert joining_date to date type.
+
+-- 4. Cast emp_id to string.
+
+-- 5. Create numeric bonus column.
+
+
+-- =====================================================
+-- 20. ALIAS() QUESTIONS
+-- =====================================================
+
+-- 1. Display salary as monthly_salary.
+
+-- 2. Display department as dept_name.
+
+-- 3. Use alias in aggregation.
+
+-- 4. Rename average salary column using alias.
+
+-- 5. Use alias in joins.

@@ -1,0 +1,25 @@
+-- =====================================================
+-- INTERVIEW-ORIENTED PRACTICE
+-- =====================================================
+
+-- 1. Difference between map and flatMap.
+
+-- 2. Difference between groupBy and reduceByKey.
+
+-- 3. Difference between repartition and coalesce.
+
+-- 4. Difference between cache and persist.
+
+-- 5. Difference between union and unionByName.
+
+-- 6. Difference between inner join and left join.
+
+-- 7. Difference between distinct and dropDuplicates.
+
+-- 8. Difference between rank and dense_rank.
+
+-- 9. Difference between explode and explode_outer.
+
+-- 10. Difference between rollup and cube.
+
+

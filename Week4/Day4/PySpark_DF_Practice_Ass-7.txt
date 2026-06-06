@@ -1,0 +1,75 @@
+-- =====================================================
+-- 31. REPARTITION() QUESTIONS
+-- =====================================================
+
+-- 1. Repartition dataframe into 4 partitions.
+
+-- 2. Repartition by department.
+
+-- 3. Check partition count.
+
+-- 4. Compare repartition and coalesce.
+
+-- 5. Repartition large datasets.
+
+
+-- =====================================================
+-- 32. COALESCE() QUESTIONS
+-- =====================================================
+
+-- 1. Reduce partitions to 2.
+
+-- 2. Check performance difference.
+
+-- 3. Use coalesce before writing files.
+
+-- 4. Compare shuffle behavior.
+
+-- 5. Optimize output files.
+
+
+-- =====================================================
+-- 33. CACHE() QUESTIONS
+-- =====================================================
+
+-- 1. Cache employee dataframe.
+
+-- 2. Perform multiple actions after cache.
+
+-- 3. Compare execution time.
+
+-- 4. Use cache with aggregation.
+
+-- 5. Unpersist cached dataframe.
+
+
+-- =====================================================
+-- 34. FILLNA() QUESTIONS
+-- =====================================================
+
+-- 1. Fill null salaries with 0.
+
+-- 2. Fill null city with Unknown.
+
+-- 3. Fill multiple columns.
+
+-- 4. Fill null ages with average age.
+
+-- 5. Replace null strings.
+
+
+-- =====================================================
+-- 35. REPLACE() QUESTIONS
+-- =====================================================
+
+-- 1. Replace Hyderabad with HYD.
+
+-- 2. Replace IT with Information Technology.
+
+-- 3. Replace Male/Female with M/F.
+
+-- 4. Replace QA with Testing.
+
+-- 5. Replace multiple values together.
+
+
