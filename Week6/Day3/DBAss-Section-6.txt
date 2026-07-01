@@ -1,0 +1,11 @@
+# =====================================================
+# SECTION 6: SORTING & DISTINCT
+# =====================================================
+
+# 35. Sort products by price descending.
+
+# 36. Display distinct categories.
+
+# 37. Display distinct cities.
+
+# 38. Display top 5 expensive orders.

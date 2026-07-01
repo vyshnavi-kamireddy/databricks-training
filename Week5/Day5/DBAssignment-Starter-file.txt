@@ -1,0 +1,49 @@
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import *
+
+spark = SparkSession.builder.appName("PySparkAssignment").getOrCreate()
+
+orders_data = [
+    (101, 1, "Laptop", "Electronics", 50000, 1, "2025-01-10", "Hyderabad"),
+    (102, 2, "Mobile", "Electronics", 30000, 2, "2025-01-11", "Bangalore"),
+    (103, 3, "TV", "Electronics", 45000, 1, "2025-01-12", "Chennai"),
+    (104, 1, "Shoes", "Fashion", 3000, 2, "2025-01-13", "Hyderabad"),
+    (105, 4, "Watch", "Fashion", 5000, 1, "2025-01-14", "Mumbai"),
+    (106, 5, "Refrigerator", "Appliances", 35000, 1, "2025-01-15", "Delhi"),
+    (107, 2, "AC", "Appliances", 40000, 1, "2025-01-16", "Bangalore"),
+    (108, 6, "Mobile", "Electronics", 25000, 3, "2025-01-17", "Pune"),
+    (109, 3, "Shoes", "Fashion", 3500, 2, "2025-01-18", "Chennai"),
+    (110, 7, "Laptop", "Electronics", 60000, 1, "2025-01-19", "Kolkata"),
+    (111, 8, "Watch", "Fashion", 4500, 2, "2025-01-20", "Delhi"),
+    (112, 4, "Mobile", "Electronics", 28000, 1, "2025-01-21", "Mumbai"),
+    (113, 9, "TV", "Electronics", 55000, 1, "2025-01-22", "Hyderabad"),
+    (114, 10, "AC", "Appliances", 42000, 1, "2025-01-23", "Pune"),
+    (115, 5, "Shoes", "Fashion", 2500, 4, "2025-01-24", "Delhi")
+]
+
+orders_cols = ["order_id","customer_id","product",
+               "category","price","quantity",
+               "order_date","city"]
+
+orders_df = spark.createDataFrame(orders_data, orders_cols)
+
+orders_df.show()
+Customers DataFrame
+customers_data = [
+    (1,"Sravan",28,"Hyderabad"),
+    (2,"Rahul",30,"Bangalore"),
+    (3,"Priya",27,"Chennai"),
+    (4,"Sneha",35,"Mumbai"),
+    (5,"Arjun",32,"Delhi"),
+    (6,"Kiran",29,"Pune"),
+    (7,"Amit",40,"Kolkata"),
+    (8,"Meena",26,"Delhi"),
+    (9,"Ravi",31,"Hyderabad"),
+    (10,"Pooja",33,"Pune")
+]
+
+customers_cols = ["customer_id","customer_name","age","city"]
+
+customers_df = spark.createDataFrame(customers_data, customers_cols)
+
+customers_df.show()

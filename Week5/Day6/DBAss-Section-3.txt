@@ -1,0 +1,17 @@
+# =====================================================
+# SECTION 3: AGGREGATIONS
+# =====================================================
+
+# 16. Find total sales amount.
+
+# 17. Find total quantity sold per category.
+
+# 18. Find average product price by category.
+
+# 19. Find maximum priced product.
+
+# 20. Find minimum priced product.
+
+# 21. Find total orders by city.
+
+# 22. Find category generating highest revenue.

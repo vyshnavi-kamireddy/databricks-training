@@ -1,0 +1,17 @@
+# =====================================================
+# SECTION 7: WINDOW FUNCTIONS
+# =====================================================
+
+# 39. Assign row_number based on revenue descending.
+
+# 40. Assign rank by category based on price.
+
+# 41. Assign dense_rank by category.
+
+# 42. Find highest priced product in each category.
+
+# 43. Find second highest priced product in each category.
+
+# 44. Calculate running revenue per city.
+
+# 45. Calculate cumulative quantity sold.

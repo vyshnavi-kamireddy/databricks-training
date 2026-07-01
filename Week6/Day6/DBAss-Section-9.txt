@@ -1,0 +1,25 @@
+# =====================================================
+# SECTION 9: REAL-TIME DATA ENGINEER SCENARIOS
+# =====================================================
+
+# 56. Find customers purchasing from multiple categories.
+
+# 57. Identify customers who bought both Mobile and Laptop.
+
+# 58. Find repeat customers.
+
+# 59. Find category contribution percentage to total revenue.
+
+# 60. Find monthly sales trend.
+
+# 61. Find top-selling product.
+
+# 62. Find bottom-selling product.
+
+# 63. Find customer retention percentage.
+
+# 64. Find city-wise revenue contribution.
+
+# 65. Generate customer segmentation report.
+
+

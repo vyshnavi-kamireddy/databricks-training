@@ -1,0 +1,41 @@
+# =====================================================
+# SECTION 1: BASIC TRANSFORMATIONS
+# =====================================================
+
+# 1. Display only order_id, product and price.
+        orders_df.select('order_id','product','price').display()
+
+# 2. Rename column product to product_name.
+        orders_df.withColumnRenamed('product','product_name').display()
+
+# 3. Add a new column total_amount = price * quantity.
+        orders_df.withColumn('total_amount',col('price')*col('quantity')).display()
+
+# 4. Create a column discount where:
+#     Electronics → 10%
+#     Fashion → 5%
+#     Appliances → 8%
+
+        orders_df.withColumn('discount',\
+        when(col('category')=='Electronics',"10%")\
+        .when(col('category')=='Fashion',"5%")\
+            .when(col('category')=='Appliances',"8%")).display()
+
+
+# 5. Convert order_date into DateType.
+        orders_df.withColumn('order_date',col('order_date').cast('Date')).display()
+
+# 6. Display all orders placed from Hyderabad.
+        orders_df.filter(col('city')=='Hyderabad').display()
+
+# 7. Find orders where quantity > 2.
+        orders_df.filter(col('quantity')>2).display()
+
+# 8. Display only Electronics products.
+        orders_df.filter(col('category')=='Electronics').display()
+
+# 9. Create a column category_upper.
+        orders_df.withColumn('category_upper',upper(col('category'))).display()
+
+# 10. Remove the city column.
+        orders_df.drop('city').display()

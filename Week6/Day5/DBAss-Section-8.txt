@@ -1,0 +1,28 @@
+# =====================================================
+# SECTION 8: ADVANCED TRANSFORMATIONS
+# =====================================================
+
+# 46. Use withColumn() to classify:
+#     High Value (>50000)
+#     Medium Value (20000-50000)
+#     Low Value (<20000)
+
+# 47. Find duplicate products.
+
+# 48. Remove duplicate products.
+
+# 49. Pivot category-wise sales by city.
+
+# 50. Unpivot the pivoted data.
+
+# 51. Create an array column containing product and category.
+
+# 52. Explode the array column.
+
+# 53. Create a map column.
+
+# 54. Convert DataFrame to RDD and count records.
+
+# 55. Convert RDD back to DataFrame.
+
+

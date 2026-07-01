@@ -1,0 +1,23 @@
+# =====================================================
+# BONUS INTERVIEW QUESTIONS
+# =====================================================
+
+# 66. Difference between select() and withColumn()?
+
+# 67. Difference between distinct() and dropDuplicates()?
+
+# 68. Difference between groupBy() and window functions()?
+
+# 69. When would you use broadcast join?
+
+# 70. Difference between repartition() and coalesce()?
+
+# 71. What causes data skew?
+
+# 72. How would you optimize a large join?
+
+# 73. How do you handle small files problem?
+
+# 74. Difference between narrow and wide transformations?
+
+# 75. How does Catalyst Optimizer improve performance?

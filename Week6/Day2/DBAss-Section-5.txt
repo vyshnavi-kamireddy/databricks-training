@@ -1,0 +1,15 @@
+# =====================================================
+# SECTION 5: JOIN TRANSFORMATIONS
+# =====================================================
+
+# 29. Join orders and customers.
+
+# 30. Display customer_name and product purchased.
+
+# 31. Find total spending by each customer.
+
+# 32. Find customer who spent maximum amount.
+
+# 33. Find average spending by city.
+
+# 34. Find customers who purchased Electronics.

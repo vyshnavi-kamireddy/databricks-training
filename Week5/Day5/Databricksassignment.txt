@@ -1,0 +1,390 @@
+Assignment: E-Commerce Orders Analysis Using PySpark
+Step 1: Create DataFrames
+Orders DataFrame
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import *
+
+spark = SparkSession.builder.appName("PySparkAssignment").getOrCreate()
+
+orders_data = [
+    (101, 1, "Laptop", "Electronics", 50000, 1, "2025-01-10", "Hyderabad"),
+    (102, 2, "Mobile", "Electronics", 30000, 2, "2025-01-11", "Bangalore"),
+    (103, 3, "TV", "Electronics", 45000, 1, "2025-01-12", "Chennai"),
+    (104, 1, "Shoes", "Fashion", 3000, 2, "2025-01-13", "Hyderabad"),
+    (105, 4, "Watch", "Fashion", 5000, 1, "2025-01-14", "Mumbai"),
+    (106, 5, "Refrigerator", "Appliances", 35000, 1, "2025-01-15", "Delhi"),
+    (107, 2, "AC", "Appliances", 40000, 1, "2025-01-16", "Bangalore"),
+    (108, 6, "Mobile", "Electronics", 25000, 3, "2025-01-17", "Pune"),
+    (109, 3, "Shoes", "Fashion", 3500, 2, "2025-01-18", "Chennai"),
+    (110, 7, "Laptop", "Electronics", 60000, 1, "2025-01-19", "Kolkata"),
+    (111, 8, "Watch", "Fashion", 4500, 2, "2025-01-20", "Delhi"),
+    (112, 4, "Mobile", "Electronics", 28000, 1, "2025-01-21", "Mumbai"),
+    (113, 9, "TV", "Electronics", 55000, 1, "2025-01-22", "Hyderabad"),
+    (114, 10, "AC", "Appliances", 42000, 1, "2025-01-23", "Pune"),
+    (115, 5, "Shoes", "Fashion", 2500, 4, "2025-01-24", "Delhi")
+]
+
+orders_cols = ["order_id","customer_id","product",
+               "category","price","quantity",
+               "order_date","city"]
+
+orders_df = spark.createDataFrame(orders_data, orders_cols)
+
+orders_df.show()
+Customers DataFrame
+customers_data = [
+    (1,"Sravan",28,"Hyderabad"),
+    (2,"Rahul",30,"Bangalore"),
+    (3,"Priya",27,"Chennai"),
+    (4,"Sneha",35,"Mumbai"),
+    (5,"Arjun",32,"Delhi"),
+    (6,"Kiran",29,"Pune"),
+    (7,"Amit",40,"Kolkata"),
+    (8,"Meena",26,"Delhi"),
+    (9,"Ravi",31,"Hyderabad"),
+    (10,"Pooja",33,"Pune")
+]
+
+customers_cols = ["customer_id","customer_name","age","city"]
+
+customers_df = spark.createDataFrame(customers_data, customers_cols)
+
+customers_df.show()
+Section 1: Basic Transformations (1-10)
+1.
+
+Display only order_id, product and price.
+
+2.
+
+Rename column product to product_name.
+
+3.
+
+Add a new column total_amount = price * quantity.
+
+4.
+
+Create a column discount where:
+
+Electronics → 10%
+Fashion → 5%
+Appliances → 8%
+5.
+
+Convert order_date into DateType.
+
+6.
+
+Display all orders placed from Hyderabad.
+
+7.
+
+Find orders where quantity > 2.
+
+8.
+
+Display only Electronics products.
+
+9.
+
+Create a column category_upper.
+
+10.
+
+Remove the city column.
+
+Section 2: Filter Transformations (11-15)
+11.
+
+Find orders with amount greater than 40,000.
+
+12.
+
+Find orders placed between Jan 15 and Jan 22.
+
+13.
+
+Find customers whose age is above 30.
+
+14.
+
+Find products that start with letter "M".
+
+15.
+
+Find orders from Hyderabad and Bangalore.
+
+Section 3: Aggregations (16-22)
+16.
+
+Find total sales amount.
+
+17.
+
+Find total quantity sold per category.
+
+18.
+
+Find average product price by category.
+
+19.
+
+Find maximum priced product.
+
+20.
+
+Find minimum priced product.
+
+21.
+
+Find total orders by city.
+
+22.
+
+Find category generating highest revenue.
+
+Section 4: GroupBy Transformations (23-28)
+23.
+
+Count products sold per category.
+
+24.
+
+Find average quantity per city.
+
+25.
+
+Find total revenue per city.
+
+26.
+
+Find total revenue per customer.
+
+27.
+
+Find top 3 customers by revenue.
+
+28.
+
+Find city with highest sales.
+
+Section 5: Join Transformations (29-34)
+29.
+
+Join orders and customers.
+
+30.
+
+Display customer_name and product purchased.
+
+31.
+
+Find total spending by each customer.
+
+32.
+
+Find customer who spent maximum amount.
+
+33.
+
+Find average spending by city.
+
+34.
+
+Find customers who purchased Electronics.
+
+Section 6: Sorting & Distinct (35-38)
+35.
+
+Sort products by price descending.
+
+36.
+
+Display distinct categories.
+
+37.
+
+Display distinct cities.
+
+38.
+
+Display top 5 expensive orders.
+
+Section 7: Window Functions (39-45)
+from pyspark.sql.window import Window
+39.
+
+Assign row_number based on revenue descending.
+
+40.
+
+Assign rank by category based on price.
+
+41.
+
+Assign dense_rank by category.
+
+42.
+
+Find highest priced product in each category.
+
+43.
+
+Find second highest priced product in each category.
+
+44.
+
+Calculate running revenue per city.
+
+45.
+
+Calculate cumulative quantity sold.
+
+Section 8: Advanced Transformations (46-55)
+46.
+
+Use withColumn() to classify:
+
+High Value (>50000)
+Medium Value (20000-50000)
+Low Value (<20000)
+47.
+
+Find duplicate products.
+
+48.
+
+Remove duplicate products.
+
+49.
+
+Pivot category-wise sales by city.
+
+50.
+
+Unpivot the pivoted data.
+
+51.
+
+Create an array column containing product and category.
+
+52.
+
+Explode the array column.
+
+53.
+
+Create a map column.
+
+54.
+
+Convert DataFrame to RDD and count records.
+
+55.
+
+Convert RDD back to DataFrame.
+
+Section 9: Real-Time Data Engineer Scenarios (56-65)
+56.
+
+Find customers purchasing from multiple categories.
+
+57.
+
+Identify customers who bought both Mobile and Laptop.
+
+58.
+
+Find repeat customers.
+
+59.
+
+Find category contribution percentage to total revenue.
+
+60.
+
+Find monthly sales trend.
+
+61.
+
+Find top-selling product.
+
+62.
+
+Find bottom-selling product.
+
+63.
+
+Find customer retention percentage.
+
+64.
+
+Find city-wise revenue contribution.
+
+65.
+
+Generate customer segmentation report.
+
+Bonus Interview Questions (66-75)
+66.
+
+Difference between select() and withColumn()?
+
+67.
+
+Difference between distinct() and dropDuplicates()?
+
+68.
+
+Difference between groupBy() and window functions()?
+
+69.
+
+When would you use broadcast join?
+
+70.
+
+Difference between repartition() and coalesce()?
+
+71.
+
+What causes data skew?
+
+72.
+
+How would you optimize a large join?
+
+73.
+
+How do you handle small files problem?
+
+74.
+
+Difference between narrow and wide transformations?
+
+75.
+
+How does Catalyst Optimizer improve performance?
+
+This assignment covers:
+
+Select
+Filter
+withColumn
+when
+Alias
+GroupBy
+Aggregations
+Joins
+Distinct
+Sort
+Window Functions
+Arrays
+Maps
+Explode
+Pivot/Unpivot
+RDD Conversions
+Real-time Data Engineering Scenarios
+
+These 75 questions are at the level typically asked for 3–8 years Data Engineer interviews involving PySpark, Databricks, and Spark SQL.

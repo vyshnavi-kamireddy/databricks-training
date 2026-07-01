@@ -1,0 +1,13 @@
+# =====================================================
+# SECTION 2: FILTER TRANSFORMATIONS
+# =====================================================
+
+# 11. Find orders with amount greater than 40,000.
+
+# 12. Find orders placed between Jan 15 and Jan 22.
+
+# 13. Find customers whose age is above 30.
+
+# 14. Find products that start with letter "M".
+
+# 15. Find orders from Hyderabad and Bangalore.

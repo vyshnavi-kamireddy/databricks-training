@@ -1,0 +1,15 @@
+# =====================================================
+# SECTION 4: GROUPBY TRANSFORMATIONS
+# =====================================================
+
+# 23. Count products sold per category.
+
+# 24. Find average quantity per city.
+
+# 25. Find total revenue per city.
+
+# 26. Find total revenue per customer.
+
+# 27. Find top 3 customers by revenue.
+
+# 28. Find city with highest sales.
