@@ -3,11 +3,17 @@
 # =====================================================
 
 # 11. Find orders with amount greater than 40,000.
+        orders_df.withColumn('total_amount',col('price')*col('quantity')).filter(col('total_amount')>40000).display()
 
 # 12. Find orders placed between Jan 15 and Jan 22.
+        orders_df.filter(col('order_date').between('2025-01-15','2025-01-22')).display()
 
 # 13. Find customers whose age is above 30.
+        customers_df.filter(col('age')>30).display()
 
 # 14. Find products that start with letter "M".
+        orders_df.filter(col('product').like('M%')).display()
 
 # 15. Find orders from Hyderabad and Bangalore.
+        orders_df.filter(col('city').isin('Hyderabad','Bangalore')).display()
+        
