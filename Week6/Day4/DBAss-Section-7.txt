@@ -3,15 +3,24 @@
 # =====================================================
 
 # 39. Assign row_number based on revenue descending.
+        from pyspark.sql.window import Window;
+
+        orders_df.withColumn('Revenue',col('price')*col('quantity')).withColumn('Row_Number',row_number().over(Window.orderBy(col('Revenue').desc()))).display();
 
 # 40. Assign rank by category based on price.
+        orders_df.withColumn('rank',rank().over(Window.partitionBy('category').orderBy(col('price').desc()))).display();
 
 # 41. Assign dense_rank by category.
+        orders_df.withColumn('dense_rank',dense_rank().over(Window.partitionBy('category').orderBy(col('price').desc()))).display();
 
 # 42. Find highest priced product in each category.
+        orders_df.withColumn('dense_rank',dense_rank().over(Window.partitionBy('category').orderBy(col('price').desc()))).filter(col('dense_rank')==1).display();
 
 # 43. Find second highest priced product in each category.
+        orders_df.withColumn('dense_rank',dense_rank().over(Window.partitionBy('category').orderBy(col('price').desc()))).filter(col('dense_rank')==2).display();
 
 # 44. Calculate running revenue per city.
+        orders_df.withColumn('running_revenue',sum(col('price')*col('quantity')).over(Window.partitionBy('city').orderBy('order_date'))).display();
 
 # 45. Calculate cumulative quantity sold.
+        orders_df.withColumn('cumulative_quantity',sum(col('quantity')).over(Window.partitionBy('city').orderBy('order_date'))).display();
