@@ -3,13 +3,19 @@
 # =====================================================
 
 # 23. Count products sold per category.
+        orders_df.groupBy('category').agg(count('order_id').alias('No_of_products')).display();
 
 # 24. Find average quantity per city.
+        orders_df.groupBy('city').agg(avg('quantity').alias('avg_quantity')).display();
 
 # 25. Find total revenue per city.
+        orders_df.groupBy('city').agg(sum(col('price')*col('quantity')).alias('total_revenue')).display();
 
 # 26. Find total revenue per customer.
+        orders_df.groupBy('customer_id').agg(sum(col('price')*col('quantity')).alias('total_revenue')).display();
 
 # 27. Find top 3 customers by revenue.
+        orders_df.groupBy('customer_id').agg(sum(col('price')*col('quantity')).alias('total_revenue')).orderBy(col('total_revenue').desc()).limit(3).display();
 
 # 28. Find city with highest sales.
+        orders_df.groupBy('city').agg(sum('quantity').alias('total_sales')).orderBy(col('total_sales').desc()).limit(1).display();        
