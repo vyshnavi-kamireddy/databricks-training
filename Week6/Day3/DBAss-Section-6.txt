@@ -3,9 +3,13 @@
 # =====================================================
 
 # 35. Sort products by price descending.
+        orders_df.select('product','price').orderBy(col('price').desc()).display()
 
 # 36. Display distinct categories.
+        orders_df.select('category').distinct().display();
 
 # 37. Display distinct cities.
+        orders_df.select('city').distinct().display();
 
 # 38. Display top 5 expensive orders.
+        orders_df.select('order_id','price').orderBy(col('price').desc()).limit(5).display();
