@@ -1,63 +1,76 @@
-# 📊 Week 1 - Day 1 | SQL Fundamentals
+# 📊 Week 1 • Day 1 | SQL Fundamentals
 
-## 📌 Overview
-Focused on building a strong foundation in SQL by practicing essential querying techniques on an Employee Management database. The exercises covered data retrieval, filtering, pattern matching, date functions, aggregation, grouping, and conditional analysis.
+> *Building a strong foundation in SQL through hands-on query practice using an Employee Management database.*
+
+---
+
+## 🎯 Objective
+
+Practice and implement core SQL concepts by solving real-world querying scenarios involving data retrieval, filtering, aggregation, grouping, and date-based analysis.
 
 ---
 
 ## 📂 Files Included
 
-- `schema.sql` – Database schema and sample data
-- `queries.sql` – SQL queries (Q1 – Q30)
+| File | Description |
+|------|-------------|
+| `Sql_queries_basics.sql` | Covers basic SQL queries, filtering, string operations, subqueries, and date functions. |
+| `Sql_Aggregate_groupby_having.sql` | Implements aggregate functions, `GROUP BY`, and `HAVING` queries for data analysis. |
 
 ---
 
-## 🚀 Topics Covered
+## 🚀 What I Implemented
 
-### 🔹 Basic Queries
-- Retrieve all or specific columns using `SELECT`
-- Filter records using `WHERE`
-- Use subqueries for conditional retrieval
+### 🔹 Basic SQL Queries
+- Retrieved complete and selective records using `SELECT`
+- Applied conditional filtering with `WHERE`
+- Used subqueries to fetch department-specific employees
 
-### 🔹 String Functions
+### 🔹 String & Date Functions
 - Pattern matching with `LIKE`
-- Wildcards (`%`, `_`)
-- String length using `CHAR_LENGTH()`
-
-### 🔹 Date Functions
-- Extract year and month using `YEAR()` and `MONTH()`
-- Filter records based on date conditions
-- Retrieve recent records using `DATE_SUB()`
+- String length validation using `CHAR_LENGTH()`
+- Date filtering using `YEAR()`, `MONTH()`, and `DATE_SUB()`
 
 ### 🔹 Aggregate Functions
-- `SUM()`
-- `AVG()`
-- `MIN()`
-- `COUNT()`
+- Calculated total, average, and minimum salaries
+- Counted employees across departments using `COUNT()`
 
-### 🔹 GROUP BY & HAVING
-- Department-wise aggregations
-- Salary and hiring analysis
-- Filter grouped results using `HAVING`
+### 🔹 Grouping & Analysis
+- Performed department-wise aggregations using `GROUP BY`
+- Filtered grouped data using `HAVING`
+- Analyzed employee hiring trends and salary distributions
 
 ---
 
-## 🛠️ Skills Practiced
+## 🛠️ Concepts Practiced
 
-- SQL Querying
-- Data Filtering
-- Aggregate Functions
-- GROUP BY
-- HAVING
-- String Functions
-- Date Functions
-- Subqueries
+<p align="center">
+
+`SELECT` • `WHERE` • `LIKE` • `Subqueries` • `YEAR()` • `MONTH()` • `DATE_SUB()` • `SUM()` • `AVG()` • `MIN()` • `COUNT()` • `GROUP BY` • `HAVING`
+
+</p>
 
 ---
 
 ## 🎯 Outcome
 
-- Developed a solid understanding of SQL fundamentals and query writing.
-- Learned how to retrieve, filter, and analyze relational data efficiently.
-- Gained hands-on experience with aggregate functions, `GROUP BY`, and `HAVING`.
-- Improved confidence in solving practical SQL querying scenarios.
+✔ Strengthened SQL fundamentals through practical query implementation.
+
+✔ Learned how to retrieve, filter, and analyze relational data efficiently.
+
+✔ Gained hands-on experience with aggregate functions and grouped analysis.
+
+✔ Built confidence in writing structured SQL queries for real-world data scenarios.
+
+---
+
+## 🌟 Highlights
+
+- ✅ Solved **30 SQL practice queries**
+- ✅ Worked with an **Employee Management relational database**
+- ✅ Explored **data retrieval, aggregation, and analytical queries**
+- ✅ Established a solid foundation for advanced SQL concepts
+
+---
+
+> **Next Up:** SQL Joins, Nested Queries & Advanced Query Techniques 🚀
