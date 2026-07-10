@@ -1,12 +1,12 @@
-# 📊 Week 1 • Day 4 | Advanced Window Functions & Common Table Expressions (CTEs)
+# 📊 Week 1 • Day 4 | Window Functions & CTEs
 
-> *Building advanced SQL analytical skills by combining window functions, Common Table Expressions (CTEs), and recursive queries to solve real-world business scenarios.*
+> *Practicing advanced SQL concepts using Window Functions, Common Table Expressions (CTEs), and Recursive CTEs.*
 
 ---
 
 ## 🎯 Objective
 
-Strengthen SQL analytical capabilities by implementing advanced window functions, CTEs, recursive CTEs, and business reporting queries while reinforcing fundamental SQL concepts.
+Learn how to analyze and organize data using advanced SQL techniques such as Window Functions and CTEs.
 
 ---
 
@@ -14,73 +14,45 @@ Strengthen SQL analytical capabilities by implementing advanced window functions
 
 | File | Description |
 |------|-------------|
-| `Sql_Select_Where_GroupBy_Having.sql` | SQL practice covering SELECT, WHERE, GROUP BY, and HAVING clauses. |
-| `Sql_Window_Functions_CTE_Assignment.sql` | Advanced SQL assignment implementing Window Functions, CTEs, Recursive CTEs, and analytical reporting queries. |
+| `sql_queries_starter.sql` | Creates the tables and inserts sample data. |
+| `sql_queries_ass.sql` | SQL queries covering core SQL concepts and practice exercises. |
+| `sql_window_functions_ass.sql` | SQL queries using Window Functions, CTEs, and Recursive CTEs. |
 
 ---
 
 ## 🚀 What I Implemented
 
-### 🔹 SQL Fundamentals Revision
-- Retrieved and filtered employee records using `SELECT` and `WHERE`
-- Performed department-wise aggregations with `GROUP BY`
-- Filtered grouped results using `HAVING`
+### 🔹 SQL Practice
+- Data retrieval using `SELECT` and `WHERE`
+- Grouping and aggregation with `GROUP BY` and `HAVING`
 
-### 🔹 Advanced Window Functions
-- Compared current and previous records using `LAG()`
-- Calculated moving averages over a sliding window
-- Divided employee salaries into quartiles using `NTILE()`
-- Retrieved first and latest customer orders using `ROW_NUMBER()`
-- Compared employee salaries with departmental averages
-- Calculated department payroll and salary contribution percentages
+### 🔹 Window Functions
+- Ranking employees using `ROW_NUMBER()`, `RANK()`, and `DENSE_RANK()`
+- Running totals and moving averages
+- Previous and next row comparison using `LAG()`
+- Salary and department-based analysis
 
 ### 🔹 Common Table Expressions (CTEs)
-- Created reusable query blocks for sales analysis
-- Calculated employee sales and customer spending
-- Ranked customers based on total spending
-- Filtered records using CTE-generated metrics
-
-### 🔹 Recursive CTEs
-- Generated sequential numbers using recursion
-- Built employee hierarchy reports using manager relationships
-
-### 🔹 Business Analytics
-- Identified second-highest salaries within departments
-- Compared employee salaries with departmental maximums
-- Ranked top-performing employees based on sales
-- Generated monthly sales trends with running totals and growth analysis
+- Created reusable query blocks
+- Solved sales and customer analysis problems
+- Used Recursive CTEs for hierarchy and sequence generation
 
 ---
 
-## 🛠️ Concepts Practiced
+## 🛠️ Topics Covered
 
-<p align="center">
-
-`SELECT` • `WHERE` • `GROUP BY` • `HAVING` • `ROW_NUMBER()` • `RANK()` • `DENSE_RANK()` • `LAG()` • `NTILE()` • `Window Functions` • `CTE` • `Recursive CTE` • `Running Totals` • `Analytical SQL`
-
-</p>
+`Window Functions` • `ROW_NUMBER()` • `RANK()` • `DENSE_RANK()` • `LAG()` • `NTILE()` • `OVER()` • `PARTITION BY` • `CTEs` • `Recursive CTEs`
 
 ---
 
 ## 🎯 Outcome
 
-✔ Reinforced SQL fundamentals while progressing to advanced analytical queries.
+✔ Built a strong understanding of Window Functions and CTEs.
 
-✔ Learned how Common Table Expressions improve query readability and modularity.
+✔ Improved SQL query writing for analytical and reporting scenarios.
 
-✔ Gained practical experience with window functions for ranking, trend analysis, and cumulative calculations.
-
-✔ Improved problem-solving skills by combining CTEs and analytical functions to solve real-world business scenarios.
+✔ Gained hands-on experience solving real-world SQL problems.
 
 ---
 
-## 🌟 Highlights
-
-- ✅ Implemented advanced Window Functions for analytical reporting
-- ✅ Built reusable SQL logic using Common Table Expressions (CTEs)
-- ✅ Explored Recursive CTEs for hierarchical and sequence-based queries
-- ✅ Solved practical business reporting scenarios involving sales, rankings, payroll, and growth analysis
-
----
-
-> **Next Up:** Advanced SQL Case Studies & Real-World Query Challenges 🚀
+⭐ **Progress:** Completed advanced SQL practice with analytical queries and business reporting scenarios.
