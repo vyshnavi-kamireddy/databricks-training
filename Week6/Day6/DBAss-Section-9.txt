@@ -3,23 +3,92 @@
 # =====================================================
 
 # 56. Find customers purchasing from multiple categories.
-
+        orders_df.groupBy('customer_id').agg(countDistinct('category').alias('count')).filter(col('count')>1).display(); 
+               
 # 57. Identify customers who bought both Mobile and Laptop.
-
+        orders_df.filter(col('product').isin('Mobile','Laptop')).groupBy('customer_id').agg(countDistinct('product').alias('count')).filter(col('count')==2).display();
+        
 # 58. Find repeat customers.
+        orders_df.groupBy('customer_id').agg(countDistinct('order_id').alias('count')).filter(col('count')>1).display();
 
 # 59. Find category contribution percentage to total revenue.
+        total_revenue=orders_df.agg(sum(col('price')*col('quantity'))).collect()[0][0];
+        orders_df.groupBy('category')\
+        .agg(sum(col('price')*col('quantity')).alias('category_revenue'))\
+                .withColumn('Revenue_perc',round((col('category_revenue')/total_revenue)*100,2)).display()
+                
+from pyspark.sql.functions import col, sum, date_format, round, countDistinct, when
 
-# 60. Find monthly sales trend.
+# 60. Find Monthly Sales Trend
+        orders_df.groupBy(
+        date_format(col("order_date"), "yyyy-MM").alias("Month")
+        ).agg(
+        sum(col("price") * col("quantity")).alias("Monthly_Sales")
+        ).orderBy("Month").display()
 
-# 61. Find top-selling product.
 
-# 62. Find bottom-selling product.
+# 61. Find Top-Selling Product (by Quantity)
+        orders_df.groupBy("product") \
+        .agg(
+                sum("quantity").alias("Total_Quantity")
+        ) \
+        .orderBy(col("Total_Quantity").desc()) \
+        .limit(1) \
+        .display()
 
-# 63. Find customer retention percentage.
 
-# 64. Find city-wise revenue contribution.
+# 62. Find Bottom-Selling Product (by Quantity)
+        orders_df.groupBy("product") \
+        .agg(
+                sum("quantity").alias("Total_Quantity")
+        ) \
+        .orderBy("Total_Quantity") \
+        .limit(1) \
+        .display()
 
-# 65. Generate customer segmentation report.
+
+# 63. Find Customer Retention Percentage
+        total_customers = orders_df.select("customer_id").distinct().count()
+
+        repeat_customers = orders_df.groupBy("customer_id") \
+        .agg(
+                countDistinct("order_id").alias("Order_Count")
+        ) \
+        .filter(col("Order_Count") > 1) \
+        .count()
+
+        retention_percentage = round((repeat_customers / total_customers) * 100, 2)
+
+        print("Customer Retention Percentage:", retention_percentage, "%")
+
+
+# 64. Find City-wise Revenue Contribution
+        total_revenue = orders_df.agg(
+        sum(col("price") * col("quantity"))
+        ).collect()[0][0]
+
+        orders_df.groupBy("city") \
+        .agg(
+                sum(col("price") * col("quantity")).alias("City_Revenue")
+        ) \
+        .withColumn(
+                "Revenue_Percentage",
+                round((col("City_Revenue") / total_revenue) * 100, 2)
+        ) \
+        .display()
+
+
+# 65. Generate Customer Segmentation Report
+        orders_df.groupBy("customer_id") \
+        .agg(
+                sum(col("price") * col("quantity")).alias("Total_Spent")
+        ) \
+        .withColumn(
+                "Customer_Segment",
+                when(col("Total_Spent") >= 100000, "Premium")
+                .when(col("Total_Spent") >= 50000, "Gold")
+                .otherwise("Regular")
+        ) \
+        .display()
 
 
