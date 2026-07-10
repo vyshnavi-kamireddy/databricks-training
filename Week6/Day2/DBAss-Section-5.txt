@@ -3,13 +3,19 @@
 # =====================================================
 
 # 29. Join orders and customers.
+        orders_df.join(customers_df,"customer_id",'full').display();
 
 # 30. Display customer_name and product purchased.
+        orders_df.join(customers_df,"customer_id",'full').select('customer_name','product').display();
 
 # 31. Find total spending by each customer.
+        orders_df.join(customers_df,"customer_id",'full').groupBy('customer_id','customer_name').agg(sum(col('price')*col('quantity')).alias('total_spending')).display();
 
 # 32. Find customer who spent maximum amount.
-
+        orders_df.join(customers_df,"customer_id",'full').groupBy('customer_id','customer_name').agg(sum(col('price')*col('quantity')).alias('total_spending')).orderBy(col('total_spending').desc()).limit(1).display();
+        
 # 33. Find average spending by city.
+        orders_df.groupBy('city').agg(avg(col('price')*col('quantity')).alias('avg_spending')).display();
 
 # 34. Find customers who purchased Electronics.
+        orders_df.join(customers_df,"customer_id","full").filter(col('category')=='Electronics').display();
