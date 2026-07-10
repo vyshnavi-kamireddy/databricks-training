@@ -3,21 +3,56 @@
 # =====================================================
 
 # 66. Difference between select() and withColumn()?
+        # select() is used to select specific columns from a DataFrame.
+        # withColumn() is used to add a new column or modify an existing column.
 
 # 67. Difference between distinct() and dropDuplicates()?
+        # distinct() removes duplicate rows based on all columns.
+        # dropDuplicates() removes duplicates based on specified column(s) or all columns if none are specified.
 
-# 68. Difference between groupBy() and window functions()?
+# 68. Difference between groupBy() and win-dow functions()?
+        # groupBy() aggregates data and returns one row per group.
+        # Window functions perform calculations across rows while retaining all original rows.
 
 # 69. When would you use broadcast join?
+        # Use broadcast join when one DataFrame is very small and the other is very large.
+        # Broadcasting avoids expensive data shuffling and improves join performance.
 
 # 70. Difference between repartition() and coalesce()?
+        # repartition() increases or decreases partitions and performs a full shuffle.
+        # coalesce() mainly reduces partitions with minimal shuffle, making it more efficient.
 
 # 71. What causes data skew?
+        # Data skew occurs when a few partition keys contain much more data than others,
+        # causing some executors to process significantly more data and slowing the job.
 
 # 72. How would you optimize a large join?
+        # - Use broadcast join for small tables.
+        # - Partition data on join keys.
+        # - Filter data before joining.
+        # - Remove unnecessary columns.
+        # - Handle data skew using salting if required.
 
-# 73. How do you handle small files problem?
+# 73. How do you handle the small files problem?
+        # - Use coalesce() or repartition() before writing.
+        # - Write fewer output partitions.
+        # - Periodically compact multiple small files into larger files.
 
 # 74. Difference between narrow and wide transformations?
+        # Narrow Transformation:
+        # - No data shuffle.
+        # - Each partition depends on one parent partition.
+        # - Examples: select(), filter(), withColumn()
+
+        # Wide Transformation:
+        # - Requires data shuffle.
+        # - Data moves across partitions.
+        # - Examples: groupBy(), join(), distinct(), orderBy()
 
 # 75. How does Catalyst Optimizer improve performance?
+        # Catalyst Optimizer automatically optimizes Spark SQL queries by:
+        # - Pushing filters down to the data source.
+        # - Reordering joins.
+        # - Eliminating unnecessary columns.
+        # - Optimizing execution plans.
+        # This results in faster query execution.
