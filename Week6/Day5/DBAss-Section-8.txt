@@ -7,22 +7,43 @@
 #     Medium Value (20000-50000)
 #     Low Value (<20000)
 
+            orders_df.withColumn('revenue',col('price')*col('quantity')).withColumn('revenue_category',when(col('revenue')>50000,'High Value').when(col('revenue').between(20000,50000),'Medium Value').otherwise('Low Value')).display();
+            
 # 47. Find duplicate products.
+        orders_df.groupBy('product').agg(count('*').alias('count')).filter(col('count')>1).display();
 
 # 48. Remove duplicate products.
+        orders_df.dropDuplicates(['product']).display();
 
 # 49. Pivot category-wise sales by city.
+        orders_df.withColumn('revenue',col('price')*col('quantity')).groupBy('city').pivot('category').agg(sum('revenue').alias('total_sales')).display();
 
 # 50. Unpivot the pivoted data.
+        pivot_df=orders_df.withColumn('revenue',col('price')*col('quantity')).groupBy('city').pivot('category').agg(sum('revenue').alias('total_sales'));
+
+        pivot_df.unpivot(
+            ids='city',
+            values=['Appliances','Electronics','Fashion'],
+            variableColumnName='category',
+            valueColumnName='total_sales'
+        ).display();
 
 # 51. Create an array column containing product and category.
+        orders_df.withColumn('product-category',array(col('product'),col('category'))).display();
 
 # 52. Explode the array column.
+        array_df=orders_df.withColumn('product-category',array(col('product'),col('category')));
+        array_df.withColumn('value',explode('product-category')).display();
 
 # 53. Create a map column.
+        orders_df.withColumn('map',create_map(lit('product'),col('product'),lit('category'),col('category'))).display();
 
 # 54. Convert DataFrame to RDD and count records.
+        orders_df.rdd.count();
 
 # 55. Convert RDD back to DataFrame.
+        rdd=orders_df.rdd
+        df=rdd.toDF()
+        df.display()
 
 
