@@ -1,12 +1,12 @@
 # 📊 Week 3 • Day 4 | PySpark DataFrame Transformations
 
-> *Learning how to transform PySpark DataFrames by renaming columns, creating derived columns, applying business logic, and converting data types for efficient data processing.*
+> *Exploring PySpark DataFrame transformation techniques by renaming columns, creating derived columns, and performing datatype conversions for data preparation.*
 
 ---
 
 # 🎯 Objective
 
-Build a strong understanding of PySpark DataFrame transformation techniques by practicing column modifications, feature engineering, and datatype conversions.
+Strengthen PySpark DataFrame transformation skills by modifying schemas, engineering new features, applying business logic, and converting datatypes for efficient data processing.
 
 ---
 
@@ -14,44 +14,47 @@ Build a strong understanding of PySpark DataFrame transformation techniques by p
 
 | File | Description |
 |------|-------------|
-| `Dataframe_Transformations.py` | PySpark practice covering DataFrame transformations using `withColumnRenamed()`, `withColumn()`, conditional expressions, and type casting. |
+| `PySpark-Ass-1-Starter.txt` | Starter file containing transformation exercises and practice problems. |
+| `PySpark-Ass-1.txt` | Completed PySpark solutions demonstrating DataFrame transformations, derived columns, and datatype conversions. |
 
 ---
 
 # 🚀 What I Implemented
 
 ### 🔹 Column Renaming
-- Renamed columns using `withColumnRenamed()`
-- Renamed multiple columns in a single transformation chain
-- Improved DataFrame readability with meaningful column names
+
+- Renamed DataFrame columns using `withColumnRenamed()`
+- Renamed multiple columns through chained transformations
+- Improved schema readability with meaningful column names
 
 ### 🔹 Creating New Columns
-- Generated bonus as **10% of salary**
-- Calculated annual salary
+
+- Calculated employee bonus
+- Generated annual salary
 - Computed tax deductions
-- Added updated salary after increment
-- Created salary categories (High, Medium, Low)
-- Classified employees into age groups
+- Updated salary with increments
+- Categorized salaries into High, Medium, and Low
+- Classified employees by age group
 - Combined city and department into a location column
 - Calculated incremented salary
 - Identified employee experience status
 - Calculated employee name length
-- Created high-salary indicator
+- Created high salary indicator
 - Extracted joining year
 - Computed salary after tax
 - Generated department codes
-- Created double salary column
+- Calculated double salary values
 
-### 🔹 Data Type Conversions
-- Converted columns into:
-  - String
-  - Integer
-  - Float
-  - Double
-  - Long
-  - Date
-  - Timestamp
-- Applied multiple datatype conversions within a single DataFrame
+### 🔹 Data Type Conversion
+
+- Converted columns to String
+- Converted columns to Integer
+- Converted columns to Float
+- Converted columns to Double
+- Converted columns to Long
+- Converted date strings into Date datatype
+- Converted dates into Timestamp datatype
+- Applied multiple datatype conversions in a single transformation pipeline
 
 ---
 
@@ -63,16 +66,16 @@ Build a strong understanding of PySpark DataFrame transformation techniques by p
 
 # 🎯 Outcome
 
-✔ Learned how to rename DataFrame columns effectively.
+✔ Learned to rename and organize DataFrame columns effectively.
 
-✔ Created new columns using arithmetic operations and business rules.
+✔ Created derived columns using arithmetic and conditional expressions.
 
-✔ Applied conditional transformations using `when()` and `otherwise()`.
+✔ Applied business rules through PySpark transformations.
 
-✔ Practiced extracting and manipulating string and date values.
+✔ Practiced feature engineering for analytical datasets.
 
 ✔ Strengthened datatype conversion skills for real-world data processing.
 
 ---
 
-⭐ **Progress:** Successfully completed **Day 4** by mastering PySpark DataFrame transformations, feature engineering, schema modifications, and datatype conversions for building clean and analytics-ready datasets.
+⭐ **Progress:** Successfully completed **Day 4** by mastering PySpark DataFrame transformations, feature engineering, schema modifications, and datatype conversions to prepare clean, analysis-ready datasets.
