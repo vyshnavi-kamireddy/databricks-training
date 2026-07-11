@@ -1,64 +1,62 @@
 # 📊 Week 2 • Day 1 | College Management System (CMS)
 
-Practicing relational database design and SQL querying by building a College Management System database and solving real-world academic reporting problems.
+> *Designed and queried a relational College Management System database by creating interconnected tables and solving practical SQL problems using real-world academic scenarios.*
+
+---
 
 ## 🎯 Objective
 
-Strengthen SQL fundamentals by designing relational tables, establishing relationships, and solving practical SQL queries using joins, aggregate functions, grouping, filtering, and subqueries.
+Strengthen SQL fundamentals by designing a relational database and solving practical queries involving students, departments, staff, subjects, and examination records.
+
+---
 
 ## 📂 Files Included
 
 | File | Description |
 |------|-------------|
-| **cms_starter_complete.sql** | Creates the College Management System database with tables, relationships, constraints, and sample data. |
-| **cms_ass_queries.sql** | SQL practice queries covering joins, aggregations, filtering, grouping, reporting, and subqueries. |
+| `cms_starter_complete.sql` | Creates the complete College Management System database with tables, relationships, constraints, and sample data. |
+| `cms_ass_queries.sql` | SQL practice queries covering joins, aggregations, filtering, grouping, subqueries, and reporting scenarios. |
+
+---
 
 ## 🚀 What I Implemented
 
 ### 🔹 Database Design
-
 - Created relational tables using Primary Keys and Foreign Keys.
 - Established relationships between departments, staff, students, subjects, and marks.
-- Inserted realistic sample data for SQL practice.
+- Inserted realistic sample data for SQL practice and reporting.
 
 ### 🔹 SQL Query Practice
+- Solved **25 SQL practice queries** using real-world academic datasets.
+- Retrieved, filtered, sorted, and grouped data efficiently.
+- Generated department-wise and student-wise analytical reports.
 
-- Retrieved and filtered records using SELECT and WHERE.
-- Generated reports using GROUP BY and HAVING.
-- Applied aggregate functions including COUNT(), SUM(), AVG(), MIN(), and MAX().
+### 🔹 Aggregate Functions & Reporting
+- Applied `COUNT()`, `SUM()`, `AVG()`, `MIN()`, and `MAX()`.
+- Used `GROUP BY` and `HAVING` to generate summary reports.
+- Analyzed student performance, department statistics, and salary expenditure.
 
-### 🔹 SQL JOINs
+### 🔹 SQL JOINs & Subqueries
+- Worked with `INNER JOIN` and `LEFT JOIN` to combine related tables.
+- Implemented subqueries to solve analytical problems such as highest scorers, second-highest salary, and above-average performance.
+- Identified unmatched records like departments without students and students without marks.
 
-- Worked with INNER JOIN and LEFT JOIN.
-- Retrieved related information across multiple tables.
-- Identified unmatched records using joins.
-
-### 🔹 Subqueries
-
-- Solved analytical queries using nested subqueries.
-- Compared individual records with aggregate results.
-- Retrieved highest and second-highest values.
-
-### 🔹 Business Scenarios
-
-- Department-wise student analysis.
-- Staff salary reporting.
-- Student performance analysis.
-- Subject-wise marks reporting.
-- Departments without students.
-- Students without marks.
-- Subjects without assigned staff.
+---
 
 ## 🛠️ Topics Covered
 
-SELECT • WHERE • ORDER BY • Aggregate Functions • GROUP BY • HAVING • INNER JOIN • LEFT JOIN • Subqueries • Primary Keys • Foreign Keys • NULL Handling
+`Database Design` • `Primary Keys` • `Foreign Keys` • `SELECT` • `WHERE` • `ORDER BY` • `Aggregate Functions` • `GROUP BY` • `HAVING` • `INNER JOIN` • `LEFT JOIN` • `Subqueries` • `NULL Handling`
+
+---
 
 ## 🎯 Outcome
 
-✔ Built a relational College Management System database from scratch.
+✔ Built a complete relational College Management System database from scratch.
 
-✔ Completed **25 SQL practice queries** covering database design, joins, aggregations, and reporting scenarios.
+✔ Completed **25 SQL practice queries** covering core SQL concepts and real-world reporting scenarios.
 
-✔ Strengthened SQL fundamentals through hands-on practice with real-world academic datasets.
+✔ Strengthened SQL fundamentals, relational database concepts, and analytical query writing.
 
-⭐ **Progress:** Successfully completed Day 1 by building a relational database and applying core SQL concepts to solve practical business and reporting problems.
+---
+
+⭐ **Progress:** Successfully completed Day 1 by combining database design with practical SQL querying, establishing a strong foundation for advanced SQL concepts in the upcoming days.
