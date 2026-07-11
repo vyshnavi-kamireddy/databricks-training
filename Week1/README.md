@@ -1,14 +1,12 @@
 # 📊 Week 1 | SQL Foundations & Advanced Querying
 
-> *A week dedicated to building a strong SQL foundation through hands-on practice, progressively moving from basic queries to advanced analytical techniques such as JOINs, Subqueries, Window Functions, and Common Table Expressions (CTEs).*
+> *A week dedicated to strengthening SQL fundamentals through hands-on practice, progressing from basic data retrieval to advanced analytical querying using JOINs, Window Functions, and Common Table Expressions (CTEs).*
 
 ---
 
 # 🎯 Week Objective
 
-The primary goal of this week was to strengthen my SQL fundamentals by solving practical database problems and working with relational datasets.
-
-Each day introduced new concepts while reinforcing previous ones through hands-on query writing, helping me gradually transition from basic SQL operations to advanced analytical querying techniques.
+The focus of Week 1 was to build a solid foundation in SQL by solving practical database problems and working with multiple relational datasets. Throughout the week, I explored core SQL concepts, advanced querying techniques, and analytical functions commonly used in real-world data analysis and database management.
 
 ---
 
@@ -18,44 +16,44 @@ Each day introduced new concepts while reinforcing previous ones through hands-o
 |------|------------|--------------|
 | **Day 1** | SQL Fundamentals | SELECT, WHERE, Aggregate Functions, GROUP BY, HAVING |
 | **Day 2** | Intermediate SQL | ORDER BY, JOINs, Nested Queries, Correlated Subqueries |
-| **Day 3** | Relational Databases | SQL JOIN Assignments, Window Functions |
-| **Day 4** | Advanced SQL | CTEs, Recursive CTEs, Ranking Functions, Analytical Queries |
-| **Day 5** | Querying & Filtering | TOP/LIMIT, DISTINCT, Comparison Operators, LIKE, BETWEEN, IN |
+| **Day 3** | Relational Database Queries | SQL JOINs, Window Functions, Ranking |
+| **Day 4** | Advanced SQL | CTEs, Recursive CTEs, Analytical Queries |
+| **Day 5** | Data Retrieval & Filtering | DISTINCT, TOP/LIMIT, Operators, LIKE, BETWEEN, IN |
 
 ---
 
-# 📊 Week 1 Statistics
+# 📊 Week Highlights
 
 | Metric | Achievement |
 |---------|------------:|
 | 📅 Practice Days | **5** |
-| 📝 SQL Queries Solved | **150+** |
+| 📝 SQL Queries Solved | **190+** |
+| 📂 SQL Files | **10** |
 | 🗄️ Database Schemas | **3** |
-| 📋 Tables Created & Used | **9+** |
-| 🔗 JOIN Queries | **20+** |
-| 📈 Aggregate & Analytical Queries | **60+** |
+| 📋 Tables Used | **9+** |
+| 🔗 JOIN Scenarios | **20+** |
+| 📈 Analytical & Aggregate Queries | **70+** |
 | 🧠 SQL Concepts Practiced | **25+** |
-| 💻 SQL Files | **10** |
 
 ---
 
-# 🚀 Skills & Concepts Practiced
+# 🚀 Technical Skills Demonstrated
 
-## 🔹 SQL Fundamentals
+### 🔹 SQL Fundamentals
 
-Developed a strong understanding of core SQL operations by practicing:
+Developed a strong understanding of SQL basics by working with:
 
-- SELECT Statements
-- WHERE Clause
+- SELECT statements
+- WHERE clause
 - ORDER BY
 - DISTINCT
 - TOP / LIMIT
 - Aliasing
-- Basic Data Retrieval
+- Data retrieval techniques
 
 ---
 
-## 🔹 Aggregate Functions
+### 🔹 Aggregation & Reporting
 
 Implemented analytical queries using:
 
@@ -65,11 +63,11 @@ Implemented analytical queries using:
 - `MIN()`
 - `MAX()`
 
-These functions were applied to generate salary reports, department-wise summaries, employee statistics, and business insights.
+Applied these functions to generate salary reports, department summaries, employee statistics, and business insights.
 
 ---
 
-## 🔹 GROUP BY & HAVING
+### 🔹 GROUP BY & HAVING
 
 Practiced grouping and filtering aggregated data through:
 
@@ -80,11 +78,11 @@ Practiced grouping and filtering aggregated data through:
 
 ---
 
-## 🔹 SQL JOINs
+### 🔹 SQL JOINs
 
-Worked extensively with relational databases to understand table relationships and data retrieval across multiple datasets.
+Worked with multiple relational tables to understand data relationships.
 
-Practiced:
+Implemented:
 
 - INNER JOIN
 - LEFT JOIN
@@ -92,11 +90,11 @@ Practiced:
 - FULL OUTER JOIN
 - CROSS JOIN
 
-Applied these joins across employee, department, project, student, instructor, course, and enrollment databases.
+Applied JOINs across employee, department, project, student, instructor, course, and enrollment datasets.
 
 ---
 
-## 🔹 Nested & Correlated Queries
+### 🔹 Nested & Correlated Queries
 
 Solved analytical SQL problems involving:
 
@@ -104,13 +102,13 @@ Solved analytical SQL problems involving:
 - Department-wise salary comparisons
 - Employees earning above department averages
 - Multi-level filtering
-- Correlated business queries
+- Correlated subqueries
 
 ---
 
-## 🔹 Window Functions
+### 🔹 Window Functions
 
-Applied analytical functions including:
+Explored advanced analytical functions including:
 
 - ROW_NUMBER()
 - RANK()
@@ -121,35 +119,35 @@ Applied analytical functions including:
 - OVER()
 - PARTITION BY
 
-Used these functions for ranking, cumulative totals, moving averages, payroll analysis, and reporting.
+Used these functions for ranking, running totals, moving averages, departmental analysis, and reporting.
 
 ---
 
-## 🔹 Common Table Expressions (CTEs)
+### 🔹 Common Table Expressions (CTEs)
 
-Worked with:
+Implemented:
 
 - Simple CTEs
 - Multiple CTEs
 - Recursive CTEs
 
-Implemented reusable SQL logic for:
+Applied CTEs to build reusable SQL logic for:
 
 - Employee hierarchy
 - Customer spending analysis
-- Sales reporting
-- Department payroll
-- Ranking and analytical reports
+- Payroll reports
+- Sales analysis
+- Department rankings
 
 ---
 
-## 🔹 Advanced Filtering
+### 🔹 Advanced Filtering
 
-Practiced business-oriented filtering techniques using:
+Strengthened data retrieval skills using:
 
 - Comparison Operators
 - Logical Operators (`AND`, `OR`, `NOT`)
-- IN / NOT IN
+- IN & NOT IN
 - BETWEEN
 - LIKE Pattern Matching
 
@@ -158,32 +156,31 @@ Practiced business-oriented filtering techniques using:
 # 📂 Repository Structure
 
 ```text
-Week_1/
+Week1/
 │
-├── Day_1/
+├── Day1/
 │   ├── sql_create_insert.sql
 │   ├── sql_queries.sql
 │   └── README.md
 │
-├── Day_2/
+├── Day2/
 │   ├── sql_queries.sql
 │   └── README.md
 │
-├── Day_3/
+├── Day3/
 │   ├── sql_joins_ass.sql
 │   ├── sql_joins_starter.sql
 │   ├── sql_window_functions_ass.sql
 │   ├── sql_window_functions_starter.sql
 │   └── README.md
 │
-├── Day_4/
-│   ├── sql_create_insert.sql
+├── Day4/
+│   ├── sql_queries_starter.sql
 │   ├── sql_queries_ass.sql
 │   ├── sql_window_functions_ass.sql
-│   ├── sql_window_functions_starter.sql
 │   └── README.md
 │
-├── Day_5/
+├── Day5/
 │   ├── sql_queries_ass.sql
 │   └── README.md
 │
@@ -194,7 +191,7 @@ Week_1/
 
 # 🗄️ Database Schemas Used
 
-To simulate practical business scenarios, I worked with multiple relational database schemas.
+Throughout the week, I worked with multiple relational database schemas to simulate real-world scenarios.
 
 ### 👨‍💼 Employee Management System
 
@@ -217,25 +214,26 @@ To simulate practical business scenarios, I worked with multiple relational data
 
 ---
 
-# 🌟 Practical Scenarios Implemented
+# 🌟 Practical SQL Scenarios Solved
 
-Throughout the week, I solved SQL problems based on real-world business use cases, including:
+Some of the practical problems implemented during the week include:
 
-- 📈 Department-wise salary analysis
-- 👨‍💼 Highest & second-highest salary identification
-- 🏢 Employee and department reporting
+- 📊 Department-wise salary analysis
+- 💰 Highest and second-highest salary identification
+- 👨‍💼 Employee and department reporting
 - 🎓 Student-course enrollment analysis
-- 📊 Employee ranking using Window Functions
-- 💰 Department payroll calculations
-- 📑 Employee hierarchy generation using Recursive CTEs
-- 📉 Running totals and moving averages
-- 📋 Customer spending reports
+- 🔗 Multi-table JOIN operations
+- 🏆 Employee ranking using Window Functions
+- 📈 Running totals and moving averages
+- 🧾 Department payroll calculations
+- 🌳 Employee hierarchy using Recursive CTEs
+- 💳 Customer spending analysis
 - 🔍 Pattern matching and advanced filtering
-- 📊 Business reporting with analytical SQL queries
+- 📋 Business reporting using analytical SQL queries
 
 ---
 
-# 💻 Technologies Used
+# 💻 Tools & Technologies
 
 - MySQL
 - PostgreSQL
@@ -244,7 +242,7 @@ Throughout the week, I solved SQL problems based on real-world business use case
 
 ---
 
-# 📈 Weekly Progress
+# ✅ Competencies Covered
 
 | Topic | Status |
 |--------|:------:|
@@ -257,44 +255,34 @@ Throughout the week, I solved SQL problems based on real-world business use case
 | Window Functions | ✅ |
 | Common Table Expressions (CTEs) | ✅ |
 | Recursive CTEs | ✅ |
-| SQL Filtering & Pattern Matching | ✅ |
+| Advanced Filtering | ✅ |
 
 ---
 
-# 💡 Key Learnings
+# 💡 Key Takeaways
 
-Throughout this week, I developed a structured approach to writing SQL queries by progressing from simple retrieval operations to advanced analytical reporting.
+By the end of this week, I was able to:
 
-Some of the key takeaways include:
-
-- Writing clean and readable SQL queries
-- Understanding relationships between multiple tables
-- Building efficient JOIN queries
-- Solving analytical problems using Window Functions
-- Creating reusable SQL logic with CTEs
-- Applying nested and correlated subqueries
-- Improving logical thinking through real-world SQL scenarios
-- Strengthening confidence in relational database querying
+- Write clean, structured, and readable SQL queries.
+- Retrieve and filter data efficiently from relational databases.
+- Generate business reports using aggregate functions.
+- Build complex queries using JOINs, subqueries, and CTEs.
+- Apply Window Functions for ranking and analytical reporting.
+- Solve practical SQL problems using real-world datasets.
+- Strengthen logical thinking and database problem-solving skills.
 
 ---
 
-# 🎯 Outcome
+# 🎯 Week Summary
 
-By the end of Week 1, I successfully completed **150+ SQL practice problems** covering both fundamental and advanced concepts.
+Week 1 provided a strong foundation in SQL through consistent hands-on practice and progressively challenging exercises.
 
-This week strengthened my understanding of relational databases, analytical query writing, reporting techniques, and business-oriented SQL problem solving.
+Across **190+ SQL queries**, I explored everything from basic data retrieval to advanced analytical techniques, gaining practical experience in writing efficient queries, working with relational databases, and solving business-oriented problems.
 
-It also established a solid foundation for future learning in:
-
-- 📊 Data Analytics
-- ⚙️ Data Engineering
-- 🗄️ Database Development
-- 🚀 Backend Development
+This week's learning serves as a solid foundation for future work in **Data Engineering**, **Data Analytics**, **Database Development**, and **Backend Development**.
 
 ---
 
-## ⭐ Week 1 Milestone
+## ⭐ Milestone Achieved
 
-Successfully completed **Week 1 SQL Practice**, progressing from fundamental SQL concepts to advanced querying techniques through consistent hands-on implementation.
-
-The repository demonstrates practical applications of SQL concepts including **aggregations, JOINs, subqueries, Window Functions, CTEs, recursive queries, and analytical reporting**, showcasing continuous learning and problem-solving across a wide range of database scenarios.
+Successfully completed **Week 1 – SQL Foundations & Advanced Querying**, covering fundamental and advanced SQL concepts through practical implementations across multiple datasets and real-world business scenarios.
