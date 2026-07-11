@@ -1,154 +1,64 @@
-# 📊 Week 2 • Day 1 | College Management System (CMS) – SQL Practice
+# 📊 Week 2 • Day 1 | College Management System (CMS)
 
-Day 1 focused on building and querying a relational College Management System (CMS) database. The practice involved designing database tables, inserting sample data, and solving real-world SQL problems using joins, aggregate functions, subqueries, filtering, and grouping techniques.
+Practicing relational database design and SQL querying by building a College Management System database and solving real-world academic reporting problems.
 
----
+## 🎯 Objective
 
-# 🎯 Objective
+Strengthen SQL fundamentals by designing relational tables, establishing relationships, and solving practical SQL queries using joins, aggregate functions, grouping, filtering, and subqueries.
 
-- Design a relational database from scratch.
-- Understand relationships between multiple tables.
-- Strengthen SQL querying skills using realistic academic datasets.
-- Practice writing business-oriented SQL queries involving students, staff, departments, subjects, and marks.
-
----
-
-# 📂 Files Included
+## 📂 Files Included
 
 | File | Description |
 |------|-------------|
-| **cms_starter_complete.sql** | Creates the College Management System database, tables, relationships, and sample data. |
-| **cms_ass_queries.sql** | Contains 25 SQL practice queries covering joins, aggregations, filtering, subqueries, and reporting. |
+| **cms_starter_complete.sql** | Creates the College Management System database with tables, relationships, constraints, and sample data. |
+| **cms_ass_queries.sql** | SQL practice queries covering joins, aggregations, filtering, grouping, reporting, and subqueries. |
 
----
+## 🚀 What I Implemented
 
-# 🗄️ Database Schema
+### 🔹 Database Design
 
-The CMS database consists of five related tables:
+- Created relational tables using Primary Keys and Foreign Keys.
+- Established relationships between departments, staff, students, subjects, and marks.
+- Inserted realistic sample data for SQL practice.
 
-- Department
-- Staff
-- Student
-- Subject
-- Mark
+### 🔹 SQL Query Practice
 
-The tables are connected using primary and foreign keys to simulate a real-world college management system.
+- Retrieved and filtered records using SELECT and WHERE.
+- Generated reports using GROUP BY and HAVING.
+- Applied aggregate functions including COUNT(), SUM(), AVG(), MIN(), and MAX().
 
----
+### 🔹 SQL JOINs
 
-# 🚀 What I Implemented
+- Worked with INNER JOIN and LEFT JOIN.
+- Retrieved related information across multiple tables.
+- Identified unmatched records using joins.
 
-## Database Design
+### 🔹 Subqueries
 
-- Created 5 relational tables
-- Defined Primary Keys
-- Established Foreign Key relationships
-- Inserted realistic sample records
-- Worked with nullable values for practical scenarios
+- Solved analytical queries using nested subqueries.
+- Compared individual records with aggregate results.
+- Retrieved highest and second-highest values.
 
----
+### 🔹 Business Scenarios
 
-## SQL Concepts Practiced
+- Department-wise student analysis.
+- Staff salary reporting.
+- Student performance analysis.
+- Subject-wise marks reporting.
+- Departments without students.
+- Students without marks.
+- Subjects without assigned staff.
 
-### Data Retrieval
+## 🛠️ Topics Covered
 
-- SELECT
-- WHERE
-- ORDER BY
-- DISTINCT
+SELECT • WHERE • ORDER BY • Aggregate Functions • GROUP BY • HAVING • INNER JOIN • LEFT JOIN • Subqueries • Primary Keys • Foreign Keys • NULL Handling
 
----
+## 🎯 Outcome
 
-### Aggregate Functions
+✔ Built a relational College Management System database from scratch.
 
-- COUNT()
-- SUM()
-- AVG()
-- MIN()
-- MAX()
+✔ Completed **25 SQL practice queries** covering database design, joins, aggregations, and reporting scenarios.
 
----
+✔ Strengthened SQL fundamentals through hands-on practice with real-world academic datasets.
 
-### GROUP BY & HAVING
-
-Generated department-wise reports including:
-
-- Student count
-- Average CGPA
-- Highest and lowest marks
-- Total salary expenditure
-- Staff count
-
----
-
-### SQL JOINs
-
-Implemented multiple join operations including:
-
-- INNER JOIN
-- LEFT JOIN
-
-Used joins to connect:
-
-- Students ↔ Departments
-- Students ↔ Marks
-- Staff ↔ Departments
-- Subjects ↔ Staff
-
----
-
-### Subqueries
-
-Solved analytical problems such as:
-
-- Students above average CGPA
-- Staff earning above department average salary
-- Second highest salary
-- Highest scorer in each subject
-
----
-
-### Business Scenarios
-
-Developed SQL solutions for scenarios including:
-
-- Departments without students
-- Students without marks
-- Subjects without assigned staff
-- Students scoring above 90
-- Departments with high salary expenditure
-- Recent admissions with high CGPA
-- Department-wise academic performance
-
----
-
-# 📈 Practice Summary
-
-| Category | Count |
-|----------|------:|
-| Tables Created | 5 |
-| Sample Records Inserted | 60+ |
-| SQL Practice Queries | 25 |
-| JOIN Queries | 10+ |
-| Aggregate Queries | 8+ |
-| Subqueries | 5+ |
-| Reporting Scenarios | Multiple |
-
----
-
-# 🛠️ Skills Strengthened
-
-- Relational Database Design
-- SQL Query Writing
-- Multi-table JOIN Operations
-- Aggregate Reporting
-- Business Data Analysis
-- Subquery Implementation
-- Handling NULL Values
-- Query Optimization Basics
-
----
-
-# 🎯 Outcome
-
-Successfully designed and queried a relational College Management System database by completing 25 hands-on SQL exercises. This practice strengthened my understanding of relational databases, table relationships, joins, aggregation techniques, and business-oriented SQL reporting while improving confidence in solving real-world database problems.
+⭐ **Progress:** Successfully completed Day 1 by building a relational database and applying core SQL concepts to solve practical business and reporting problems.
