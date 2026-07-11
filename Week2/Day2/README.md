@@ -1,12 +1,12 @@
-# 📊 Week 2 • Day 2 | SQL Window Functions & Analytical Reporting
+# 📊 Week 2 • Day 1 | College Management System SQL Practice
 
-> *Building analytical SQL skills using Window Functions to solve ranking, cumulative analysis, and business reporting scenarios.*
+> *Building SQL problem-solving skills by working with a relational College Management System database and solving real-world querying scenarios.*
 
 ---
 
 ## 🎯 Objective
 
-Strengthen analytical SQL skills by practicing Window Functions, Common Table Expressions (CTEs), and advanced reporting queries on a relational College Management System database.
+Develop a deeper understanding of SQL by creating a complete relational database and solving practical business queries using joins, aggregations, subqueries, filtering, and reporting techniques.
 
 ---
 
@@ -14,59 +14,58 @@ Strengthen analytical SQL skills by practicing Window Functions, Common Table Ex
 
 | File | Description |
 |------|-------------|
-| `sql_queries_ass.sql` | SQL practice queries covering Window Functions, CTEs, ranking functions, cumulative calculations, and analytical reporting. |
+| `cms_starter_complete.sql` | Creates the complete College Management System database with tables, relationships, sample data, and constraints. |
+| `cms_ass_queries.sql` | Contains SQL practice queries covering joins, aggregations, filtering, subqueries, sorting, and reporting scenarios. |
 
 ---
 
 ## 🚀 What I Implemented
 
-### 🔹 Advanced SQL Queries
-- Solved analytical SQL problems using Common Table Expressions (CTEs)
-- Generated department-wise and student-wise reports
-- Retrieved top-performing students and department statistics
-- Built reusable query blocks for complex reporting
+### 🔹 Database Design
+- Created a complete College Management System database
+- Defined relational tables with primary and foreign keys
+- Inserted realistic sample records for practice
+- Established relationships between students, staff, departments, subjects, and marks
 
-### 🔹 Window Functions
-- Assigned row numbers using `ROW_NUMBER()`
-- Ranked students and staff using `RANK()` and `DENSE_RANK()`
-- Compared previous and next records using `LAG()` and `LEAD()`
-- Calculated running totals and cumulative averages
-- Generated quartiles using `NTILE()`
-- Calculated percentage rankings using `PERCENT_RANK()`
-- Computed cumulative distributions using `CUME_DIST()`
-- Performed partition-based analysis using `OVER()` and `PARTITION BY`
+### 🔹 SQL Practice
+- Retrieved and filtered records using SQL queries
+- Performed department-wise and subject-wise analysis
+- Generated student and staff reports
+- Worked with aggregate functions and grouped results
+- Solved real-world reporting scenarios using subqueries
 
-### 🔹 Business Reporting
-- Identified top-performing students
-- Compared marks against subject and department averages
-- Generated department-wise salary and performance reports
-- Created comprehensive student reports combining multiple tables
+### 🔹 Relational Database Analysis
+- Joined multiple tables to retrieve meaningful insights
+- Identified missing and unmatched records
+- Calculated department statistics and salary summaries
+- Generated student performance reports
 
 ---
 
 ## 📊 Practice Summary
 
-- **25 SQL practice queries completed**
-- Hands-on implementation of **9+ Window Functions**
-- Worked with **5 relational tables**
-- Solved multiple ranking, cumulative analysis, and reporting scenarios
+- **50 SQL practice queries completed**
+- Designed and populated **5 relational tables**
+- Worked with **INNER JOIN**, **LEFT JOIN**, and subqueries
+- Applied aggregate functions and grouped reporting techniques
+- Solved practical College Management System scenarios
 
 ---
 
 ## 🛠️ Topics Covered
 
-`CTEs` • `ROW_NUMBER()` • `RANK()` • `DENSE_RANK()` • `LAG()` • `LEAD()` • `NTILE()` • `PERCENT_RANK()` • `CUME_DIST()` • `OVER()` • `PARTITION BY` • `Running Totals` • `Cumulative Average` • `Analytical Reporting`
+`Database Design` • `CREATE TABLE` • `INSERT` • `Primary Keys` • `Foreign Keys` • `SELECT` • `WHERE` • `ORDER BY` • `GROUP BY` • `HAVING` • `INNER JOIN` • `LEFT JOIN` • `Subqueries` • `Aggregate Functions` • `Filtering` • `Sorting`
 
 ---
 
 ## 🎯 Outcome
 
-✔ Developed a strong understanding of SQL Window Functions.
+✔ Built a complete relational database from scratch.
 
-✔ Learned to build analytical reports using ranking and cumulative calculations.
+✔ Strengthened SQL query writing using real-world academic datasets.
 
-✔ Improved problem-solving skills by applying advanced SQL techniques to real-world business scenarios.
+✔ Improved understanding of joins, aggregations, and reporting queries through hands-on practice.
 
 ---
 
-⭐ **Progress:** Successfully completed advanced SQL practice focused on Window Functions, CTEs, ranking techniques, and analytical reporting.
+⭐ **Progress:** Successfully completed the first day of Week 2 by designing a relational database and solving 50 practical SQL querying scenarios.
